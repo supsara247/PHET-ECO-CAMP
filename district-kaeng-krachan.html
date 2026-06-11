@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อำเภอแก่งกระจาน</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght=300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <div class="sticky top-0 z-50 bg-white/80 backdrop-blur-md p-4 shadow-sm border-b border-stone-100">
+        <div class="container mx-auto flex justify-between items-center" id="navAuthSection">
+            <a href="index.html" class="btn btn-ghost text-emerald-700 font-bold hover:bg-emerald-50">
+                ← ย้อนกลับหน้าหลัก
+            </a>
+            <a href="auth.html" class="btn btn-emerald text-emerald-700 bg-emerald-50 hover:bg-emerald-100 border-none rounded-xl font-bold">
+                เข้าสู่ระบบ / สมัครสมาชิก 👤
+            </a>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-10 max-w-7xl">
+        
+        <div class="flex flex-col gap-4 border-l-8 border-emerald-700 pl-6 mb-12">
+            <h1 class="text-5xl font-bold text-stone-900 tracking-wide">อำเภอแก่งกระจาน</h1>
+            <p class="text-xl text-emerald-800 font-medium">"มรดกโลกทางธรรมชาติ สวรรค์ของคนรักการกางเต็นท์"</p>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-xl mb-16 h-[300px] md:h-[500px] border border-stone-200">
+            <img src="images/1.jpeg" 
+                 alt="อุทยานแห่งชาติแก่งกระจาน" 
+                 class="w-full h-full object-cover">
+        </div>
+
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-emerald-700 w-2.5 h-8 rounded-full"></span>
+                5 สถานที่แนะนำ 
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="https://maps.app.goo.gl/wxY8663ogkZihApx9" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-emerald-300">
+                    <figure class="h-48 bg-stone-100"><img src="images/เขาพะเนินทุ่ง.jpg" class="w-full h-full object-cover"/></figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-emerald-800 text-lg font-bold">1. เขาพะเนินทุ่ง 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">จุดชมทะเลหมอกตลอดปี และแหล่งดูนก-ผีเสื้อที่สำคัญ</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <a href="https://maps.app.goo.gl/cgxnezmVAdHdHR4L7" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-emerald-300">
+                    <figure class="h-48 bg-stone-100"><img src="images/สะพานแขวน.jpg" class="w-full h-full object-cover"/></figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-emerald-800 text-lg font-bold">2. สะพานแขวน 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">จุดเช็คอินยอดฮิต เดินชมวิวสันเขื่อนและรับลมเย็นๆ</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <a href="https://maps.app.goo.gl/5kD2gMqDFK78n6TWA" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-emerald-300">
+                    <figure class="h-48 bg-stone-100"><img src="images/บ้านกร่าง.jpg" class="w-full h-full object-cover"/></figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-emerald-800 text-lg font-bold">3. แคมป์บ้านกร่าง 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">เทศกาลดูผีเสื้อกว่า 200 สายพันธุ์ (ช่วง มี.ค. - มิ.ย.)</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <a href="https://maps.app.goo.gl/wtTGCNtKnJEeAAJv6" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-emerald-300">
+                    <figure class="h-48 bg-stone-100"><img src="images/น้ำตกทอทิพย์1 (2).jpg" class="w-full h-full object-cover"/></figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-emerald-800 text-lg font-bold">4. น้ำตกทอทิพย์ 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">น้ำตก 9 ชั้นใจกลางป่าลึก สำหรับสายลุยที่ชอบเดินป่า</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <a href="https://maps.app.goo.gl/ks1j5hCGTYVZKojx5" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-emerald-300">
+                    <figure class="h-48 bg-stone-100"><img src="images/อุโมงค์ต้นไม้.jpg" class="w-full h-full object-cover"/></figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-emerald-800 text-lg font-bold">5. อุโมงค์ต้นไม้ 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">เส้นทางขับรถสุดร่มรื่น มุ่งหน้าสู่พะเนินทุ่ง</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-emerald-700 w-2.5 h-8 rounded-full"></span>
+                ที่พัก & ลานกางเต็นท์ยอดนิยม
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="card bg-white shadow-lg border border-stone-100 flex flex-col h-full overflow-hidden">
+                    <figure class="h-56 relative">
+                        <img src="images/ลานกางเต็นท์โซนริมน้ำ.jpg" class="w-full h-full object-cover" />
+                        <div class="absolute top-4 left-4 badge bg-emerald-800 text-white p-3 font-bold border-none shadow-md">อุทยานฯ วิวหลักล้าน</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-emerald-900 text-xl font-bold mb-4">ลานกางเต็นท์โซนริมน้ำ อุทยานแห่งชาติแก่งกระจาน</h2>
+                        <div class="space-y-4 text-sm text-stone-600 flex-grow">
+                            <div class="bg-emerald-800 p-4 rounded-xl border-l-4 border-emerald-500 shadow-inner text-white">
+                                <strong class="text-emerald-300 block mb-1 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="mb-2 opacity-90 text-xs leading-relaxed">ลานหญ้ากว้างริมอ่างเก็บน้ำ เดินไปถ่ายรูปสะพานแขวนได้ง่าย บรรยากาศเปิดโล่งรับลมเย็น</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-emerald-700 pt-2 mt-2 opacity-95 font-light">
+                                    <div>🕒 Check-in: 08:00-18:00</div>
+                                    <div>🚪 ประตูเปิด-ปิดตามเวลา</div>
+                                    <div>🐶 ห้ามนำสัตว์เลี้ยงเข้า</div>
+                                    <div>🚶 สามารถ Walk-in ได้</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-stone-700">
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">💰</span> <strong>ค่าบริการ:</strong> 30.- / คน / คืน (เด็กฟรี)</li>
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">🚿</span> <strong>ห้องน้ำ:</strong> ห้องน้ำรวม แยกชาย-หญิง สะอาด</li>
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">⚡</span> <strong>ไฟฟ้า:</strong> มีจุดพ่วงไฟให้ (ต้องเตรียมสายยาวมาเอง)</li>
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">📶</span> <strong>สัญญาณ:</strong> 4G/5G เต็มพิกัดทุกเครือข่าย 📶</li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/oCEuCPXxZkKevRJN9" target="_blank" class="btn bg-emerald-800 hover:bg-emerald-900 text-white w-full border-none shadow-md">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg border border-stone-100 flex flex-col h-full overflow-hidden">
+                    <figure class="h-56 relative">
+                        <img src="images/Tamarind tree Camping.jpeg" class="w-full h-full object-cover" />
+                        <div class="absolute top-4 left-4 badge bg-stone-700 text-white p-3 font-bold border-none shadow-md">ลานเอกชนริมน้ำ</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-stone-800 text-xl font-bold mb-4">Tamarind tree Camping แก่งกระจาน</h2>
+                        <div class="space-y-4 text-sm text-stone-600 flex-grow">
+                            <div class="bg-stone-700 p-4 rounded-xl border-l-4 border-stone-400 shadow-inner text-white">
+                                <strong class="text-stone-300 block mb-1 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="mb-2 opacity-90 text-xs leading-relaxed">ลานกางเต็นท์ใต้ต้นมะขามใหญ่ ร่มรื่นเป็นส่วนตัว เล่นน้ำและตกปลาได้จากหน้าแคมป์</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-stone-600 pt-2 mt-2 opacity-95 font-light">
+                                    <div>🕒 Check-in: 7.00-19.00</div>
+                                    <div>🚪 ประตูปิด: 19.00 น.</div>
+                                    <div>🐶 สัตว์เลี้ยงเข้าพักได้ 🐾</div>
+                                    <div>🚐 มีพื้นที่สำหรับรถบ้าน/RV</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-stone-700">
+                                <li class="flex items-center gap-2"><span class="text-stone-600">💰</span> <strong>ค่าบริการ:</strong> เริ่มต้น 150.- / คน / คืน (เด็กฟรี)</li>
+                                <li class="flex items-center gap-2"><span class="text-stone-600">🎣</span> <strong>กิจกรรม:</strong> <span class="text-emerald-700 font-semibold">ตกปลาฟรี!</span> (จำกัดคันเบ็ด 5 คัน)</li>
+                                <li class="flex items-center gap-2"><span class="text-stone-600">❄️</span> <strong>แอร์เคลื่อนที่:</strong> ขนาดไม่เกิน 9,000 BTU (150.-/คืน)</li>
+                                <li class="flex items-center gap-2"><span class="text-stone-600">⛺</span> <strong>อุปกรณ์ให้เช่า:</strong> มีเต็นท์พร้อมเครื่องนอน (500.- / 2 ท่าน)</li>
+                                <li class="flex items-center gap-2"><span class="text-stone-600">📶</span> <strong>สัญญาณ:</strong> มือถือใช้ได้เฉพาะเครือข่าย <span class="text-emerald-700 font-bold">AIS เท่านั้น</span></li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/xYBWQGWcPefJv3qr9" target="_blank" class="btn bg-stone-700 hover:bg-stone-800 text-white w-full border-none shadow-md">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card bg-white shadow-lg border border-stone-100 flex flex-col h-full overflow-hidden">
+                    <figure class="h-56 relative">
+                        <img src="images/ลานกางเต็นท์ NS CAMP.jpg" class="w-full h-full object-cover" />
+                        <div class="absolute top-4 left-4 badge bg-amber-950 text-white p-3 font-bold border-none shadow-md">วิวพาโนรามา</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-amber-950 text-xl font-bold mb-4">ลานกางเต็นท์ NS CAMP แก่งกระจาน</h2>
+                        <div class="space-y-4 text-sm text-stone-600 flex-grow">
+                            <div class="bg-amber-950 p-4 rounded-xl border-l-4 border-amber-600 shadow-inner text-white">
+                                <strong class="text-amber-300 block mb-1 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="mb-2 opacity-90 text-xs leading-relaxed">ลานสนามหญ้าบนเนินเขาหันหน้าเข้าหาอ่างเก็บน้ำ จุดชมพระอาทิตย์ตกดินริมน้ำที่สวยปังที่สุด</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-amber-900 pt-2 mt-2 opacity-95 font-light">
+                                    <div>🕒 Check-in: 08:00-19:00</div>
+                                    <div>🚪 ประตูปิด: 20:00 น.</div>
+                                    <div>🐶 สัตว์เลี้ยงเข้าพักได้ 🐾</div>
+                                    <div>🚐 มีพื้นที่รองรับรถบ้าน</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-stone-700">
+                                <li class="flex items-center gap-2"><span class="text-amber-900">💰</span> <strong>ค่าบริการ:</strong> ประมาณ 150 - 200.- / คน / คืน</li>
+                                <li class="flex items-center gap-2"><span class="text-amber-900">🚿</span> <strong>ห้องน้ำ:</strong> สะอาด แยกโซน มีจุดล้างจานบริการ</li>
+                                <li class="flex items-center gap-2"><span class="text-amber-900">⚡</span> <strong>ไฟฟ้า:</strong> มีจุดต่อพ่วงไฟกระจายทั่วบริเวณสนามหญ้า</li>
+                                <li class="flex items-center gap-2"><span class="text-amber-900">📶</span> <strong>สัญญาณ:</strong> สัญญาณชัดเจนทุกค่าย สั่งหมูกระทะมาส่งได้</li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/Y6KNxcgFWbjRPXdy5" target="_blank" class="btn bg-amber-950 hover:bg-black text-white w-full border-none shadow-md">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="mb-24">
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-stone-900 flex items-center gap-3 mb-2">
+                    <span class="bg-emerald-700 w-2.5 h-8 rounded-full"></span>
+                    Checklist แก่งกระจาน : 6 กิจกรรมสุดฟินของสายแคมป์ปิ้ง 🎒
+                </h3>
+                <p class="text-stone-500 text-sm pl-5">มาแคมป์ปิ้งที่นี่ทั้งที ต้องเก็บไฮไลท์ธรรมชาติและกิจกรรมสุดฮิตให้ครบ!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-stone-100 rounded-xl text-2xl">🛶</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ล่องเรือยางแม่น้ำเพชร</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">กิจกรรมซิกเนเจอร์อันดับหนึ่ง นั่งเรือยางปล่อยไหลชมธรรมชาติสองฝั่งแม่น้ำ สนุกชุ่มฉ่ำสุดๆ</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-stone-100 rounded-xl text-2xl">🦋</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ดูผีเสื้อที่พะเนินทุ่ง (บ้านกร่าง)</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">ตื่นตาตื่นใจกับฝูงผีเสื้อนับแสนตัวหลากสีสัน ที่จะออกมาอวดโฉมในช่วงฤดูร้อน (มีนาคม - มิถุนายน)</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-stone-100 rounded-xl text-2xl">🔥</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ปาร์ตี้หมูกระทะริมน้ำ</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">ฟินกับหมูกระทะร้อนๆ ท่ามกลางลมเย็นๆ ลานกางเต็นท์ส่วนใหญ่มีบริการส่งตรงถึงหน้าเต็นท์เลย</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-stone-100 rounded-xl text-2xl">🐒</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ส่องนกและสัตว์ป่าหายาก</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">แก่งกระจานเป็นมรดกโลกที่สมบูรณ์มาก สายส่องนก ถ่ายภาพนกเงือก หรือดูค่างแว่นห้ามพลาด</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-stone-100 rounded-xl text-2xl">☁️</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ชมทะเลหมอกพะเนินทุ่ง</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">ไม่ต้องไปไกลถึงภาคเหนือ ที่นี่มีหมอกหนาๆ ให้ชมตลอดทั้งปี บนจุดชมวิวสูงสุดของอุทยานฯ</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-stone-100 rounded-xl text-2xl">📸</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">แชะภาพคู่สะพานแขวน</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">เช็คอินสะพานแขวนคลาสสิกข้ามอ่างเก็บน้ำ แลนด์มาร์คถ่ายรูปสุดปังที่ไม่ว่าใครมาก็ต้องได้รูปมุมนี้</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!-- ================= ส่วนรีวิวจากนักท่องเที่ยว ================= -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-emerald-700 w-2.5 h-8 rounded-full"></span>
+                รีวิวจากนักท่องเที่ยว 💬
+            </h3>
+            <p class="text-stone-500 text-sm pl-5 mb-8"> แบ่งปันประสบการณ์ท่องเที่ยวและพักผ่อนในอำเภอแก่งกระจานของคุณที่นี่ </p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <div id="reviewFormContainer">
+                    <!-- ควบคุมด้วย JavaScript -->
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-lg font-bold text-stone-800 flex items-center gap-2 mb-2">
+                        รีวิวทั้งหมด (<span id="reviewCount">0</span>)
+                    </h4>
+                    <div id="reviewsList" class="space-y-4">
+                        <!-- รายการรีวิวจะมาแสดงตรงนี้ -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const DISTRICT_KEY = 'kaengkrachan'; // คีย์เฉพาะสำหรับแยกกระดานรีวิวของอำเภอแก่งกระจาน
+
+            document.addEventListener('DOMContentLoaded', function() {
+                initReviewSystem();
+            });
+
+            function initReviewSystem() {
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const formContainer = document.getElementById('reviewFormContainer');
+                
+                // 1. ตรวจสอบสถานะการล็อกอินเพื่อแสดงผลฝั่งซ้าย
+                if (currentUser) {
+                    formContainer.innerHTML = `
+                        <div class="bg-white border border-stone-200/80 p-6 rounded-2xl shadow-sm space-y-4">
+                            <div class="flex items-center gap-3 border-b border-stone-100 pb-3">
+                                <div class="w-10 h-10 bg-emerald-100 text-emerald-800 rounded-full flex items-center justify-center font-bold text-lg">
+                                    ${currentUser.username.charAt(0).toUpperCase()}
+                                </div>
+                                <div>
+                                    <p class="text-stone-800 font-bold text-sm">${currentUser.username}</p>
+                                    <p class="text-stone-400 text-xs">ผู้ใช้ระบบ</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase">ให้คะแนนสถานที่:</label>
+                                <div class="rating rating-md gap-1" id="ratingStars">
+                                    <input type="radio" name="rating-kaengkrachan" class="mask mask-star-2 bg-orange-400" value="1" />
+                                    <input type="radio" name="rating-kaengkrachan" class="mask mask-star-2 bg-orange-400" value="2" />
+                                    <input type="radio" name="rating-kaengkrachan" class="mask mask-star-2 bg-orange-400" value="3" />
+                                    <input type="radio" name="rating-kaengkrachan" class="mask mask-star-2 bg-orange-400" value="4" checked />
+                                    <input type="radio" name="rating-kaengkrachan" class="mask mask-star-2 bg-orange-400" value="5" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase">ความเห็นของคุณ:</label>
+                                <textarea id="reviewText" class="textarea textarea-bordered w-full rounded-xl bg-stone-50 border-stone-200 focus:outline-none focus:border-emerald-500 h-28 text-sm" placeholder="เขียนรีวิวความประทับใจเกี่ยวกับแก่งกระจานที่นี่..."></textarea>
+                            </div>
+
+                            <button onclick="submitReview()" class="btn bg-emerald-700 hover:bg-emerald-800 text-white w-full border-none shadow-md rounded-xl font-bold">
+                                ส่งรีวิวข้อมูล ✨
+                            </button>
+                        </div>
+                    `;
+                } else {
+                    formContainer.innerHTML = `
+                        <div class="bg-amber-50/60 border border-amber-200/70 p-8 rounded-2xl shadow-sm text-center flex flex-col items-center justify-center min-h-[180px]">
+                            <p class="text-stone-700 font-medium mb-4 flex items-center gap-2">
+                                🔒 กรุณาเข้าสู่ระบบเพื่อเขียนรีวิว
+                            </p>
+                            <a href="auth.html" class="btn bg-amber-400 hover:bg-amber-500 text-stone-900 font-bold border-none shadow-md px-8 rounded-xl transition-all">
+                                ไปหน้าเข้าสู่ระบบ
+                            </a>
+                        </div>
+                    `;
+                }
+
+                // 2. โหลดรายการรีวิวมาแสดงผลฝั่งขวา
+                displayReviews();
+            }
+
+            // ฟังก์ชันบันทึกรีวิวใหม่
+            function submitReview() {
+                const reviewText = document.getElementById('reviewText').value.trim();
+                if (!reviewText) {
+                    alert('กรุณากรอกข้อความรีวิวก่อนส่งนะคะ');
+                    return;
+                }
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const selectedRating = document.querySelector('input[name="rating-kaengkrachan"]:checked').value;
+                
+                const newReview = {
+                    id: Date.now(),
+                    username: currentUser.username,
+                    rating: parseInt(selectedRating),
+                    text: reviewText,
+                    date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric' })
+                };
+
+                // ดึงรีวิวเก่า -> เพิ่มรีวิวใหม่ -> เซฟลง localStorage
+                let allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                if (!allReviews[DISTRICT_KEY]) {
+                    allReviews[DISTRICT_KEY] = [];
+                }
+                
+                allReviews[DISTRICT_KEY].unshift(newReview); // เอาขึ้นบนสุด
+                localStorage.setItem('reviews', JSON.stringify(allReviews));
+
+                // เคลียร์ค่าในกล่องพิมพ์ และรีโหลดหน้ารีวิวใหม่
+                document.getElementById('reviewText').value = '';
+                displayReviews();
+            }
+
+            // ฟังก์ชันดึงรีวิวมาวาดแสดงผล
+            function displayReviews() {
+                const allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                const kaengkrachanReviews = allReviews[DISTRICT_KEY] || [];
+                const reviewsList = document.getElementById('reviewsList');
+                document.getElementById('reviewCount').innerText = kaengkrachanReviews.length;
+
+                if (kaengkrachanReviews.length === 0) {
+                    reviewsList.innerHTML = `
+                        <div class="bg-white border border-stone-200/60 p-8 rounded-2xl shadow-sm flex items-center justify-center min-h-[180px] text-center">
+                            <p class="text-stone-500 font-medium flex items-center gap-2">
+                                🍃 ยังไม่มีรีวิวสำหรับแก่งกระจาน มาร่วมเขียนรีวิวเป็นคนแรกกันค่ะ!
+                            </p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                let htmlContent = '';
+                kaengkrachanReviews.forEach(review => {
+                    // วาดดาวทองตามจำนวนคะแนน
+                    let starsHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        if (i <= review.rating) {
+                            starsHtml += `<span class="text-orange-400 text-lg">★</span>`;
+                        } else {
+                            starsHtml += `<span class="text-stone-200 text-lg">★</span>`;
+                        }
+                    }
+
+                    htmlContent += `
+                        <div class="bg-white border border-stone-100 p-5 rounded-2xl shadow-sm space-y-2 hover:border-emerald-100 transition-colors">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 bg-stone-100 text-stone-700 rounded-full flex items-center justify-center font-bold text-sm">
+                                        ${review.username.charAt(0).toUpperCase()}
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-stone-800 text-sm">${review.username}</h5>
+                                        <div class="flex items-center">${starsHtml}</div>
+                                    </div>
+                                </div>
+                                <span class="text-[11px] text-stone-400 bg-stone-50 px-2.5 py-1 rounded-full font-medium">${review.date}</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed pl-10 pt-1">${review.text}</p>
+                        </div>
+                    `;
+                });
+
+                reviewsList.innerHTML = htmlContent;
+            }
+        </script>
+    </main>
+        
+</body>
+</html>
