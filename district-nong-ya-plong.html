@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อำเภอหนองหญ้าปล้อง</title>
+    <!-- DaisyUI & Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800 antialiased">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-stone-100 shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center" id="navAuthSection">
+            <a href="index.html" class="btn btn-ghost text-emerald-700 font-bold hover:bg-emerald-50 rounded-xl transition-all">
+                ← ย้อนกลับหน้าหลัก
+            </a>
+            <!-- ลบปุ่มเข้าสู่ระบบมุมขวาบนออกแล้วตามที่แจ้งค่ะ -->
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-10 max-w-7xl">
+        
+        <!-- Header Banner -->
+        <div class="flex flex-col gap-3 border-l-8 border-emerald-700 pl-6 mb-10">
+            <h1 class="text-4xl md:text-5xl font-bold text-stone-900 tracking-wide">อำเภอหนองหญ้าปล้อง</h1>
+            <p class="text-lg md:text-xl text-emerald-800 font-medium">"ดินแดนป่าสูงอันเงียบสงบ ไอหมอก น้ำพุร้อน และลำธารธรรมชาติ"</p>
+        </div>
+
+        <!-- Main Hero Image -->
+        <div class="rounded-3xl overflow-hidden shadow-lg mb-16 h-[250px] md:h-[450px] border border-stone-200">
+            <img src="images/nongyaplong-main.jpg" 
+                 alt="ธรรมชาติอำเภอหนองหญ้าปล้อง" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://files.thailandtourismdirectory.go.th/assets/upload/2018/05/16/20180516d27fb3ab40336805c9216b972be1c474132353.jpg'">
+        </div>
+
+        <!-- Section 1: Attractions -->
+        <section class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-emerald-700 w-2.5 h-8 rounded-full"></span>
+                5 สถานที่ท่องเที่ยวแนะนำ
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Attraction 1 -->
+                <a href="https://maps.app.goo.gl/vnikDaBRT9rnE1nn7" target="_blank" class="card bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-stone-200/60 hover:border-emerald-300 group overflow-hidden">
+                    <figure class="h-48 bg-stone-100 overflow-hidden">
+                        <img src="images/น้ำพุร้อนหนองหญ้าปล้อง.jpg" alt="น้ำพุร้อนหนองหญ้าปล้อง" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://files.thailandtourismdirectory.go.th/assets/upload/2018/05/16/20180516d27fb3ab40336805c9216b972be1c474132353.jpg'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h3 class="card-title text-emerald-800 text-lg font-bold">1. น้ำพุร้อนหนองหญ้าปล้อง 📍</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">บ่อน้ำแร่ร้อนธรรมชาติกลางป่าร่มรื่น เหมาะแก่การมาแช่ตัว แช่เท้าผ่อนคลายความเมื่อยล้าในวันพักผ่อน</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- Attraction 2 -->
+                <a href="https://maps.app.goo.gl/YWaxFdRd4kbzGjkP8" target="_blank" class="card bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-stone-200/60 hover:border-emerald-300 group overflow-hidden">
+                    <figure class="h-48 bg-stone-100 overflow-hidden">
+                        <img src="images/เขื่อนแม่ประจันต์.jpg" alt="เขื่อนแม่ประจันต์" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://img.wongnai.com/p/1920x0/2022/02/26/95d2e398c9df41afb71e6416a37f6950.jpg'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h3 class="card-title text-emerald-800 text-lg font-bold">2. เขื่อนแม่ประจันต์ 📍</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">อ่างเก็บน้ำขนาดใหญ่ วิวภูเขาโอบล้อมแบบพาโนรามา บรรยากาศเงียบสงบและเป็นจุดชมพระอาทิตย์ตกดินที่สวยงาม</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- Attraction 3 -->
+                <a href="https://maps.app.goo.gl/QbGGFdEPp5AsFQvR9" target="_blank" class="card bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-stone-200/60 hover:border-emerald-300 group overflow-hidden">
+                    <figure class="h-48 bg-stone-100 overflow-hidden">
+                        <img src="images/น้ำตกตลาดน้ำกวางโจว.jpg" alt="น้ำตกตลาดน้ำกวางโจว" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://travel.mthai.com/app/uploads/2013/08/17190824_1432805526739806_8977257285747927121_n.jpg'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h3 class="card-title text-emerald-800 text-lg font-bold">3. น้ำตกตลาดน้ำกวางโจว 📍</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">น้ำตกสวยบนชั้นหินติดป่าไผ่ เก๋ไก๋ด้วยคอนเซปต์ตลาดน้ำชุมชนกลางป่าแห่งแรกในไทย มีของกินในกระบอกไม้ไผ่ให้ชิม</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- Attraction 4 -->
+                <a href="https://maps.app.goo.gl/oCkqqv72fdJ1t5sJ8" target="_blank" class="card bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-stone-200/60 hover:border-emerald-300 group overflow-hidden">
+                    <figure class="h-48 bg-stone-100 overflow-hidden">
+                        <img src="images/วัดยางน้ำกลัดใต้.jpg" alt="วัดยางน้ำกลัดใต้" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://yangtai.go.th/public/slideone_upload/backend/slideone_3_1.jpg'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h3 class="card-title text-emerald-800 text-lg font-bold">4. วัดยางน้ำกลัดใต้ 📍</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">ศาสนสถานอันเงียบสงบและเป็นศูนย์รวมจิตใจของชุมชน รายล้อมด้วยบรรยากาศธรรมชาติร่มรื่น เหมาะสำหรับสายบุญ</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- Attraction 5 -->
+                <a href="https://maps.app.goo.gl/91GE8EksV6JhmBt89" target="_blank" class="card bg-white shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1.5 border border-stone-200/60 hover:border-emerald-300 group overflow-hidden">
+                    <figure class="h-48 bg-stone-100 overflow-hidden">
+                        <img src="images/อ่างเก็บน้ำบ้านลิ้นช้าง.jpg" alt="อ่างเก็บน้ำบ้านลิ้นช้าง" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCgUd5t2iOUrCwOvRI2AjAWHmWxOhZTyx_Uw&s'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h3 class="card-title text-emerald-800 text-lg font-bold">5. อ่างเก็บน้ำบ้านลิ้นช้าง 📍</h3>
+                        <p class="text-sm text-stone-600 leading-relaxed">อ่างเก็บน้ำขนาดเล็กอันเงียบสงบ รายล้อมด้วยวิวทิวเขาและธรรมชาติที่อุดมสมบูรณ์ เหมาะสำหรับสายแคมป์ปิ้ง</p>
+                        <div class="mt-4 text-xs font-bold text-emerald-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section 2: Accommodations -->
+        <section class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-emerald-700 w-2.5 h-8 rounded-full"></span>
+                ที่พัก & ลานกางเต็นท์ยอดนิยม
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Camp 1: โทนสีเขียวป่าชุ่มชื้น (ริมลำธารน้ำใส) -->
+                <div class="card bg-white shadow-md border border-stone-200/60 flex flex-col h-full overflow-hidden rounded-2xl">
+                    <figure class="h-56 relative">
+                        <img src="images/สวนน้ำศรีพนา.jpg" alt="สวนน้ำศรีพนา" class="w-full h-full object-cover" onerror="this.src='https://img.salehere.co.th/p/1200x0/2023/04/27/itlxkhnry4eu.jpg'" />
+                        <div class="absolute top-4 left-4 badge bg-emerald-800 text-white p-3 font-bold border-none shadow-md">ริมลำธารน้ำใส</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="card-title text-emerald-900 text-xl font-bold mb-4">สวนน้ำศรีพนา</h3>
+                            <div class="bg-emerald-50 p-4 rounded-xl border-l-4 border-emerald-500 shadow-sm text-emerald-900 mb-4">
+                                <strong class="text-emerald-800 block mb-2 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="text-xs text-stone-700 leading-relaxed mb-3">ลานหญ้ากว้างขวางบรรยากาศดี ติดริมลำธารน้ำตกธรรมชาติที่ไหลมาจากต้นน้ำ ลงเล่นน้ำได้ชิลๆ มีทั้งโซนกางเต็นท์และบ้านพักบริการ</p>
+                                <div class="grid grid-cols-2 gap-2 text-[11px] border-t border-emerald-200 pt-2 font-normal text-emerald-700/80">
+                                    <div>🕒 Check-in: 12:00-18:00</div>
+                                    <div>🚪 ประตูปิด: 21:00 น.</div>
+                                    <div>🐶 ห้ามนำสัตว์เลี้ยงเข้า</div>
+                                    <div>🍔 มีร้านค้าอาหารบริการ</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 text-sm font-medium text-stone-700">
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">💰</span> <strong>ค่าบริการ:</strong> ประมาณ 150 - 200.- / คน / คืน</li>
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">🚿</span> <strong>ห้องน้ำ:</strong> สะอาดแยกชาย-หญิง พร้อมเครื่องทำน้ำอุ่น</li>
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">⚡</span> <strong>ไฟฟ้า:</strong> มีจุดต่อพ่วงปลั๊กไฟให้กระจายตามลาน</li>
+                                <li class="flex items-center gap-2"><span class="text-emerald-700">📶</span> <strong>สัญญาณ:</strong> มีสัญญาณโทรศัพท์ชัดเจน เล่นเน็ตได้สบาย</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/bj6Qq3npgc39Coai8" target="_blank" class="btn bg-emerald-800 hover:bg-emerald-900 text-white w-full border-none shadow-md rounded-xl font-bold transition-all">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camp 2: โทนสีเขียวมะกอกอบอุ่น (วิวอ่างเก็บน้ำ) -->
+                <div class="card bg-white shadow-md border border-stone-200/60 flex flex-col h-full overflow-hidden rounded-2xl">
+                    <figure class="h-56 relative">
+                        <img src="images/เลคแค้มป์แม่ประจันต์.jpg" alt="เลคแค้มป์แม่ประจันต์" class="w-full h-full object-cover" onerror="this.src='https://img.wongnai.com/p/1920x0/2022/02/26/95d2e398c9df41afb71e6416a37f6950.jpg'" />
+                        <div class="absolute top-4 left-4 badge bg-stone-600 text-white p-3 font-bold border-none shadow-md">วิวอ่างเก็บน้ำ 360 องศา</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="card-title text-stone-800 text-xl font-bold mb-4">เลคแค้มป์แม่ประจันต์</h3>
+                            <div class="bg-stone-100 p-4 rounded-xl border-l-4 border-stone-500 shadow-sm text-stone-800 mb-4">
+                                <strong class="text-stone-700 block mb-2 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="text-xs text-stone-600 leading-relaxed mb-3">ลานริมอ่างเก็บน้ำเขื่อนแม่ประจันต์ โอบล้อมด้วยวิวภูเขาและผืนน้ำกว้างใหญ่ ลมพัดเย็นตลอดวัน ไฮไลท์คือจุดชมแสงเย็นยามพระอาทิตย์ตกดิน</p>
+                                <div class="grid grid-cols-2 gap-2 text-[11px] border-t border-stone-300 pt-2 font-normal text-stone-500">
+                                    <div>🕒 Check-in: 08:00-19:00</div>
+                                    <div>🚪 ประตูปิด: 21:00 น.</div>
+                                    <div>🐶 สัตว์เลี้ยงเข้าพักได้ 🐾</div>
+                                    <div>🚐 รองรับรถบ้าน / สาย Camplife</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 text-sm font-medium text-stone-700">
+                                <li class="flex items-center gap-2"><span class="text-stone-600">💰</span> <strong>ค่าบริการ:</strong> เริ่มต้น 150.- / คน / คืน</li>
+                                <li class="flex items-center gap-2"><span class="text-stone-600">🚿</span> <strong>ห้องน้ำ:</strong> ห้องน้ำส่วนรวมสะอาด พร้อมจุดล้างจานแยกโซน</li>
+                                <li class="flex items-center gap-2"><span class="text-stone-600">⚡</span> <strong>ไฟฟ้า:</strong> มีจุดพ่วงไฟให้ (แนะนำสายพ่วงยาว)</li>
+                                <li class="flex items-center gap-2"><span class="text-stone-600">📶</span> <strong>สัญญาณ:</strong> สัญญาณบางเครือข่ายค่อนข้างอ่อน</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/YCwF4owqXcRgmxcR8" target="_blank" class="btn bg-stone-600 hover:bg-stone-700 text-white w-full border-none shadow-md rounded-xl font-bold transition-all">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camp 3: โทนสีเขียวหัวเป็ด/สไตล์เบสแคมป์ (แคมป์ปิ้งล้อมขุนเขา) -->
+                <div class="card bg-white shadow-md border border-stone-200/60 flex flex-col h-full overflow-hidden rounded-2xl">
+                    <figure class="h-56 relative">
+                        <img src="images/Crack Mountain Base Camp.jpg" alt="Crack Mountain Base Camp" class="w-full h-full object-cover" onerror="this.src='https://www.lemon8-app.com/seo/image?item_id=7189505479792542209&index=5&sign=f867c6b1b8a44fd687a3aa1eb87880d6'" />
+                        <div class="absolute top-4 left-4 badge bg-teal-800 text-white p-3 font-bold border-none shadow-md">แคมป์ปิ้งล้อมขุนเขา</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col justify-between">
+                        <div>
+                            <h3 class="card-title text-teal-900 text-xl font-bold mb-4">Crack Mountain Base Camp</h3>
+                            <div class="bg-teal-50 p-4 rounded-xl border-l-4 border-teal-600 shadow-sm text-teal-950 mb-4">
+                                <strong class="text-teal-800 block mb-2 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="text-xs text-stone-700 leading-relaxed mb-3">ลานกางเต็นท์ดิบๆ สไตล์ Base Camp รายล้อมด้วยทิวเขาหินและต้นไม้ใหญ่ บรรยากาศเป็นส่วนตัว สงบเงียบ เหมาะสำหรับชาวแคมป์สายลุย</p>
+                                <div class="grid grid-cols-2 gap-2 text-[11px] border-t border-teal-200 pt-2 font-normal text-teal-700/80">
+                                    <div>🕒 Check-in: 09:00-18:00</div>
+                                    <div>🚪 ประตูปิด: 20:00 น.</div>
+                                    <div>🐶 สัตว์เลี้ยงเข้าได้ (ดูแลใกล้ชิด)</div>
+                                    <div>🚶 ติดต่อ Walk-in ได้</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 text-sm font-medium text-stone-700">
+                                <li class="flex items-center gap-2"><span class="text-teal-700">💰</span> <strong>ค่าบริการ:</strong> ประมาณ 150.- / คน / คืน</li>
+                                <li class="flex items-center gap-2"><span class="text-teal-700">🚿</span> <strong>ห้องน้ำ:</strong> มีบริการห้องน้ำรวม สะอาดสะอ้าน</li>
+                                <li class="flex items-center gap-2"><span class="text-teal-700">⚡</span> <strong>ไฟฟ้า:</strong> มีจุดบริการต่อไฟกระจายตามโซน</li>
+                                <li class="flex items-center gap-2"><span class="text-teal-700">📶</span> <strong>สัญญาณ:</strong> สัญญาณมือถือค่ายใหญ่ใช้งานได้ปกติ</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/SHaNAFVXeSwwxSf1A" target="_blank" class="btn bg-teal-800 hover:bg-teal-900 text-white w-full border-none shadow-md rounded-xl font-bold transition-all">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Checklist Activities -->
+        <section class="mb-20">
+            <div class="mb-8">
+                <h2 class="text-2xl md:text-3xl font-bold text-stone-900 flex items-center gap-3 mb-2">
+                    <span class="bg-emerald-700 w-2.5 h-8 rounded-full"></span>
+                    Checklist หนองหญ้าปล้อง : 6 กิจกรรมสุดฟิน 🎒
+                </h2>
+                <p class="text-stone-500 text-sm pl-5">เปิดพิกัดความชิลล์ท่ามกลางผืนป่าสูง ลำธาร และสายน้ำแร่ร้อนธรรมชาติ!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Act 1 -->
+                <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors duration-300">
+                    <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-emerald-50 text-emerald-700 rounded-xl text-2xl font-bold">♨️</div>
+                    <div>
+                        <h4 class="font-bold text-stone-800 mb-1">แช่น้ำพุร้อนแร่ธรรมชาติ</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">ผ่อนคลายร่างกายด้วยการแช่น้ำแร่ร้อนอุ่นๆ ท่ามกลางธรรมชาติป่าเขา ช่วยคลายเครียด</p>
+                    </div>
+                </div>
+
+                <!-- Act 2 -->
+                <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm border border-stone-200/60 hover:border-stone-400 transition-colors duration-300">
+                    <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-stone-100 text-stone-700 rounded-xl text-2xl font-bold">🎋</div>
+                    <div>
+                        <h4 class="font-bold text-stone-800 mb-1">ชิมของอร่อยบนแพไม้ไผ่</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">แวะตลาดน้ำกวางโจว ซื้ออาหารในกระบอกไม้ไผ่ แล้วนั่งทานบนแพกลางน้ำสุดร่มรื่น</p>
+                    </div>
+                </div>
+
+                <!-- Act 3 -->
+                <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm border border-stone-200/60 hover:border-teal-200 transition-colors duration-300">
+                    <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-teal-50 text-teal-700 rounded-xl text-2xl font-bold">💦</div>
+                    <div>
+                        <h4 class="font-bold text-stone-800 mb-1">นั่งแช่เท้าฟังเสียงธารไหล</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">กางเกงขาสั้นต้องมา! นั่งหย่อนขาจุ่มน้ำใสๆ เย็นฉ่ำชื่นใจที่ไหลผ่านลานกางเต็นท์</p>
+                    </div>
+                </div>
+
+                <!-- Act 4 -->
+                <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm border border-stone-200/60 hover:border-emerald-200 transition-colors duration-300">
+                    <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-emerald-50 text-emerald-700 rounded-xl text-2xl font-bold">🌅</div>
+                    <div>
+                        <h4 class="font-bold text-stone-800 mb-1">ชมพระอาทิตย์ตกลับทิวเขา</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">ช่วงเย็นเดินรับแสงสีส้มทอประกายบนสันเขื่อนแม่ประจันต์ จุดชมวิวพาโนรามาที่สวยงาม</p>
+                    </div>
+                </div>
+
+                <!-- Act 5 -->
+                <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm border border-stone-200/60 hover:border-stone-400 transition-colors duration-300">
+                    <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-stone-100 text-stone-700 rounded-xl text-2xl font-bold">☕</div>
+                    <div>
+                        <h4 class="font-bold text-stone-800 mb-1">ดริปกาแฟชิลล์ๆ รับไอหมอก</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">ตื่นเช้ามาบดเมล็ดกาแฟหอมๆ นั่งดริปหน้าเต็นท์เคล้าคลอไปกับไอหมอกจางๆ เหนือยอดเขา</p>
+                    </div>
+                </div>
+
+                <!-- Act 6 -->
+                <div class="flex gap-4 bg-white p-5 rounded-2xl shadow-sm border border-stone-200/60 hover:border-teal-200 transition-colors duration-300">
+                    <div class="w-12 h-12 shrink-0 flex items-center justify-center bg-teal-50 text-teal-700 rounded-xl text-2xl font-bold">✨</div>
+                    <div>
+                        <h4 class="font-bold text-stone-800 mb-1">นอนนับดาวฟิลฟินๆ ปลอดมลพิษ</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">เนื่องจากห่างไกลแสงเมืองรบกวน ในคืนฟ้าเปิดจะมองเห็นดวงดาวระยิบระยับเต็มท้องฟ้า</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-emerald-600 w-2.5 h-8 rounded-full"></span>
+                รีวิวจากนักท่องเที่ยว 💬
+            </h3>
+            <p class="text-stone-500 text-sm pl-5 mb-8">แบ่งปันประสบการณ์ท่องเที่ยวและพักผ่อนในอำเภอหนองหญ้าปล้องของคุณที่นี่</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <div id="reviewFormContainer">
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-lg font-bold text-stone-800 flex items-center gap-2 mb-2">
+                        รีวิวทั้งหมด (<span id="reviewCount">0</span>)
+                    </h4>
+                    <div id="reviewsList" class="space-y-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const DISTRICT_KEY = 'nong-ya-plong';
+            let editingReviewId = null; // ตัวแปรเก็บสถานะว่ากำลังแก้ไขรีวิวรหัสอะไรอยู่
+
+            document.addEventListener('DOMContentLoaded', function() {
+                initReviewSystem();
+            });
+
+            function initReviewSystem() {
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const formContainer = document.getElementById('reviewFormContainer');
+                
+                if (currentUser) {
+                    const isAdmin = currentUser.username === 'admin';
+                    formContainer.innerHTML = `
+                        <div class="bg-white border border-stone-200/80 p-6 rounded-2xl shadow-sm space-y-4">
+                            <div class="flex items-center gap-3 border-b border-stone-100 pb-3">
+                                <div class="w-10 h-10 ${isAdmin ? 'bg-rose-100 text-rose-800' : 'bg-emerald-100 text-emerald-800'} rounded-full flex items-center justify-center font-bold text-lg">
+                                    ${currentUser.username.charAt(0).toUpperCase()}
+                                </div>
+                                <div>
+                                    <p class="text-stone-800 font-bold text-sm">${currentUser.username}</p>
+                                    <p class="${isAdmin ? 'text-rose-600 font-bold' : 'text-stone-400'} text-xs">${isAdmin ? 'ผู้ดูแลระบบ (Admin)' : 'ผู้ใช้ระบบ'}</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase">ให้คะแนนสถานที่:</label>
+                                <div class="rating rating-md gap-1" id="ratingStars">
+                                    <input type="radio" name="rating-nong-ya-plong" class="mask mask-star-2 bg-amber-400" value="1" />
+                                    <input type="radio" name="rating-nong-ya-plong" class="mask mask-star-2 bg-amber-400" value="2" />
+                                    <input type="radio" name="rating-nong-ya-plong" class="mask mask-star-2 bg-amber-400" value="3" />
+                                    <input type="radio" name="rating-nong-ya-plong" class="mask mask-star-2 bg-amber-400" value="4" checked />
+                                    <input type="radio" name="rating-nong-ya-plong" class="mask mask-star-2 bg-amber-400" value="5" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase" id="formLabel">ความเห็นของคุณ:</label>
+                                <textarea id="reviewText" class="textarea textarea-bordered w-full rounded-xl bg-stone-50 border-stone-200 focus:outline-none focus:border-emerald-500 h-28 text-sm" placeholder="เขียนรีวิวความประทับใจเกี่ยวกับอำเภอหนองหญ้าปล้องที่นี่..."></textarea>
+                            </div>
+
+                            <div class="flex flex-col gap-2" id="formActionsContainer">
+                                <button onclick="submitReview()" id="submitBtn" class="btn bg-emerald-600 hover:bg-emerald-700 text-white w-full border-none shadow-md rounded-xl font-bold transition-colors">
+                                    ส่งรีวิวข้อมูล ✨
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    formContainer.innerHTML = `
+                        <div class="bg-emerald-50/50 border border-emerald-100 p-8 rounded-2xl shadow-sm text-center flex flex-col items-center justify-center min-h-[180px]">
+                            <p class="text-stone-700 font-medium mb-4 flex items-center gap-2">
+                                🔒 กรุณาเข้าสู่ระบบเพื่อเขียนรีวิว
+                            </p>
+                            <a href="auth.html" class="btn bg-emerald-700 hover:bg-emerald-800 text-white font-bold border-none shadow-md px-8 rounded-xl transition-all">
+                                ไปหน้าเข้าสู่ระบบ
+                            </a>
+                        </div>
+                    `;
+                }
+
+                displayReviews();
+            }
+
+            function submitReview() {
+                const reviewText = document.getElementById('reviewText').value.trim();
+                if (!reviewText) {
+                    alert('กรุณากรอกข้อความรีวิวก่อนส่งนะคะ');
+                    return;
+                }
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const selectedRating = document.querySelector('input[name="rating-nong-ya-plong"]:checked').value;
+                
+                let allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                if (!allReviews[DISTRICT_KEY]) {
+                    allReviews[DISTRICT_KEY] = [];
+                }
+
+                if (editingReviewId) {
+                    // โหมดแก้ไข: ค้นหาตัวที่แมตช์ ID แล้วเปลี่ยนข้อมูล
+                    allReviews[DISTRICT_KEY] = allReviews[DISTRICT_KEY].map(review => {
+                        if (review.id === editingReviewId) {
+                            return {
+                                ...review,
+                                rating: parseInt(selectedRating),
+                                text: reviewText,
+                                date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric' }) + ' (แก้ไขแล้ว)'
+                            };
+                        }
+                        return review;
+                    });
+                    editingReviewId = null;
+                    alert('แก้ไขรีวิวสำเร็จเรียบร้อยแล้วค่ะ!');
+                } else {
+                    // โหมดสร้างใหม่
+                    const newReview = {
+                        id: Date.now(),
+                        username: currentUser.username,
+                        rating: parseInt(selectedRating),
+                        text: reviewText,
+                        date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric' })
+                    };
+                    allReviews[DISTRICT_KEY].unshift(newReview);
+                }
+                
+                localStorage.setItem('reviews', JSON.stringify(allReviews));
+                
+                // รีเซ็ตฟอร์มกลับเป็นปกติ
+                document.getElementById('reviewText').value = '';
+                initReviewSystem();
+            }
+
+            function displayReviews() {
+                const allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                const nongyaplongReviews = allReviews[DISTRICT_KEY] || [];
+                const reviewsList = document.getElementById('reviewsList');
+                document.getElementById('reviewCount').innerText = nongyaplongReviews.length;
+
+                if (nongyaplongReviews.length === 0) {
+                    reviewsList.innerHTML = `
+                        <div class="bg-white border border-stone-200/60 p-8 rounded-2xl shadow-sm flex items-center justify-center min-h-[180px] text-center">
+                            <p class="text-stone-500 font-medium flex items-center gap-2">
+                                🍃 ยังไม่มีรีวิวสำหรับอำเภอหนองหญ้าปล้อง มาร่วมเขียนรีวิวเป็นคนแรกกันค่ะ!
+                            </p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                let htmlContent = '';
+
+                nongyaplongReviews.forEach(review => {
+                    let starsHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        if (i <= review.rating) {
+                            starsHtml += `<span class="text-amber-400 text-lg">★</span>`;
+                        } else {
+                            starsHtml += `<span class="text-stone-200 text-lg">★</span>`;
+                        }
+                    }
+
+                    // เงื่อนไขในการแสดงปุ่มจัดการรีวิว
+                    let actionButtonsHtml = '';
+                    if (currentUser) {
+                        const isOwner = currentUser.username === review.username;
+                        const isAdmin = currentUser.username === 'admin';
+
+                        if (isOwner) {
+                            actionButtonsHtml = `
+                                <div class="flex gap-2 mt-2 pl-10">
+                                    <button onclick="editReview(${review.id})" class="text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition-all font-bold flex items-center gap-1">✏️ แก้ไข</button>
+                                    <button onclick="deleteReview(${review.id})" class="text-xs bg-stone-50 text-stone-600 border border-stone-200 px-3 py-1.5 rounded-lg hover:bg-stone-100 transition-all font-bold flex items-center gap-1">🗑️ ลบ</button>
+                                </div>
+                            `;
+                        } else if (isAdmin) {
+                            actionButtonsHtml = `
+                                <div class="flex gap-2 mt-2 pl-10">
+                                    <button onclick="deleteReview(${review.id})" class="text-xs bg-rose-600 text-white px-3 py-1.5 rounded-lg hover:bg-rose-700 transition-all font-bold flex items-center gap-1 shadow-sm">⚡ Admin ลบรีวิวนี้</button>
+                                </div>
+                            `;
+                        }
+                    }
+
+                    htmlContent += `
+                        <div class="bg-white border border-stone-100 p-5 rounded-2xl shadow-sm space-y-2 hover:border-emerald-100 transition-colors">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 ${review.username === 'admin' ? 'bg-rose-100 text-rose-800' : 'bg-stone-100 text-stone-700'} rounded-full flex items-center justify-center font-bold text-sm">
+                                        ${review.username.charAt(0).toUpperCase()}
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-stone-800 text-sm">${review.username} ${review.username === 'admin' ? '<span class="badge badge-error text-[10px] text-white p-1 ml-1 bg-rose-600 border-none">Admin</span>' : ''}</h5>
+                                        <div class="flex items-center">${starsHtml}</div>
+                                    </div>
+                                </div>
+                                <span class="text-[11px] text-stone-400 bg-stone-50 px-2.5 py-1 rounded-full font-medium">${review.date}</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed pl-10 pt-1">${review.text}</p>
+                            ${actionButtonsHtml}
+                        </div>
+                    `;
+                });
+
+                reviewsList.innerHTML = htmlContent;
+            }
+
+            function editReview(id) {
+                editingReviewId = id;
+                
+                // ดึงข้อมูลรีวิวมาตรวจหาค่าเพื่อความปลอดภัยของ Syntax
+                const allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                const nongyaplongReviews = allReviews[DISTRICT_KEY] || [];
+                const currentReview = nongyaplongReviews.find(r => r.id === id);
+                
+                if (!currentReview) return;
+
+                // เลื่อนหน้าจอขึ้นไปที่ตัวฟอร์ม
+                document.getElementById('reviewFormContainer').scrollIntoView({ behavior: 'smooth' });
+                
+                // เปลี่ยนข้อความในฟอร์มและ Textarea ให้รองรับโหมดแก้ไข
+                document.getElementById('formLabel').innerText = '✏️ กำลังแก้ไขรีวิวของคุณ:';
+                document.getElementById('reviewText').value = currentReview.text;
+                
+                // ติ๊กเลือกดาวตามคะแนนเดิม
+                const radioToCheck = document.querySelector(`input[name="rating-nong-ya-plong"][value="${currentReview.rating}"]`);
+                if (radioToCheck) radioToCheck.checked = true;
+
+                // อัปเดตปุ่มส่งให้มีปุ่มยกเลิกเพิ่มเข้ามา
+                const actionsContainer = document.getElementById('formActionsContainer');
+                actionsContainer.innerHTML = `
+                    <button onclick="submitReview()" class="btn bg-emerald-600 hover:bg-emerald-700 text-white w-full border-none shadow-md rounded-xl font-bold transition-colors">
+                        อัปเดตข้อมูลรีวิว 💾
+                    </button>
+                    <button onclick="cancelEdit()" class="btn btn-ghost text-stone-500 w-full rounded-xl font-medium text-xs">
+                        ยกเลิกการแก้ไข
+                    </button>
+                `;
+            }
+
+            function cancelEdit() {
+                editingReviewId = null;
+                initReviewSystem();
+            }
+
+            function deleteReview(id) {
+                if (confirm('คุณแน่ใจใช่ไหมว่าต้องการลบข้อความรีวิวนี้อย่างถาวร?')) {
+                    let allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                    if (allReviews[DISTRICT_KEY]) {
+                        allReviews[DISTRICT_KEY] = allReviews[DISTRICT_KEY].filter(review => review.id !== id);
+                        localStorage.setItem('reviews', JSON.stringify(allReviews));
+                        alert('ลบข้อมูลรีวิวเรียบร้อยแล้วค่ะ');
+                        
+                        // หากลบไอเท็มตัวที่กำลังแก้อยู่ให้ล้างสถานะฟอร์มด้วย
+                        if (editingReviewId === id) {
+                            editingReviewId = null;
+                            initReviewSystem();
+                        } else {
+                            displayReviews();
+                        }
+                    }
+                }
+            }
+        </script>
+
+    </main>
+
+</body>
+</html>

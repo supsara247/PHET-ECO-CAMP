@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อำเภอชะอำ</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght=300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ฝังระบบสีใหม่: พื้นหลังสว่าง สะอาดตา หหยอดโทนสีฟ้าครามน้ำทะเลละมุน -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        blueMain: '#00A3E0',      /* สีฟ้าหลัก สดใส สบายตา สไตล์ทะเลชะอำ */
+                        blueLight: '#E6F6FC',     /* สีฟ้าอ่อนมาก สำหรับลงพื้นหลังบางจุด */
+                        blueHover: '#0082B4',     /* สีฟ้าเข้มขึ้นตอนเอาเมาส์ชี้ */
+                        bgBright: '#F9FAFB',      /* พื้นหลังหลักสว่าง สะอาดตา */
+                        cardWhite: '#FFFFFF',     /* กล่องเนื้อหาสีขาวคลีน */
+                        textDark: '#1F2937',      /* ข้อความหลัก สีเทาเข้มเกือบดำ อ่านง่าย */
+                        textMuted: '#4B5563',     /* ข้อความรอง สีเทากลาง */
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<!-- พื้นหลังหลักสีสว่างสะอาดตา (bgBright) และข้อความอ่านง่าย (textDark) -->
+<body class="bg-bgBright text-textDark"> 
+
+    <!-- แถบเมนูด้านบน สีขาวคลีน มินิมอล -->
+    <div class="sticky top-0 z-50 bg-cardWhite/90 backdrop-blur-md p-4 shadow-sm border-b border-gray-100">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="btn btn-ghost text-blueMain font-bold hover:bg-blueLight transition-all">
+                ← ย้อนกลับหน้าหลัก
+            </a>
+        </div>
+    </div>
+
+    <!-- เนื้อหาหลัก -->
+    <main class="container mx-auto px-4 py-10 max-w-7xl">
+        
+        <!-- ส่วนหัวข้ออำเภอ ไฮไลต์ด้วยเส้นขอบสีฟ้าละมุน (blueMain) -->
+        <div class="flex flex-col gap-3 border-l-8 border-blueMain pl-6 mb-12">
+            <h1 class="text-5xl font-bold text-textDark tracking-wide">อำเภอชะอำ</h1>
+            <p class="text-xl text-blueMain font-medium">"ชายหาดขาวงามตา ดื่มด่ำรสชาติอาหารทะเล เสน่ห์พระราชนิเวศน์มฤคทายวัน อัศจรรย์วนอุทยานเขานางพันธุรัต"</p>
+        </div>
+
+        <!-- รูปภาพหน้าปก -->
+        <div class="rounded-3xl overflow-hidden shadow-md mb-16 h-[300px] md:h-[500px] border border-gray-100">
+            <img src="images/ชะอำ.jpg" 
+                 alt="ชายหาดชะอำ เพชรบุรี" 
+                 class="w-full h-full object-cover"
+                 onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1200&auto=format&fit=crop'">
+        </div>
+
+        <!-- โซน 5 สถานที่แนะนำ -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-textDark flex items-center gap-3">
+                <span class="bg-blueMain w-2.5 h-8 rounded-full"></span>
+                5 สถานที่แนะนำที่ต้องไปเยือน
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- สถานที่ 1 -->
+                <a href="https://maps.app.goo.gl/qyBKmtxi65oFM9zaA" target="_blank" class="card bg-cardWhite shadow-sm hover:shadow-md transition-all hover:-translate-y-1.5 cursor-pointer border border-gray-100 hover:border-blueMain group">
+                    <figure class="h-48 bg-gray-50">
+                        <img src="images/ชายหาดชะอำ.webp" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1545579133-99bb5ab189bd?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-textDark text-lg font-bold group-hover:text-blueMain transition-colors">1. ชายหาดชะอำ 📍</h2>
+                        <p class="text-sm text-textMuted leading-relaxed">ชายหาดชื่อดังระดับประเทศ ทิวทัศน์แนวต้นสนร่มรื่นยาวหลายกิโลเมตร มีกิจกรรมทางน้ำมากมาย คาเฟ่ริมทะเล และร้านอาหารซีฟู้ดสดๆ ราคาย่อมเยาเรียงรายตลอดทาง</p>
+                        <div class="mt-4 text-xs font-bold text-blueMain flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- สถานที่ 2 -->
+                <a href="https://maps.app.goo.gl/RGigWijd4Szq8nMQ8" target="_blank" class="card bg-cardWhite shadow-sm hover:shadow-md transition-all hover:-translate-y-1.5 cursor-pointer border border-gray-100 hover:border-blueMain group">
+                    <figure class="h-48 bg-gray-50">
+                        <img src="images/พระราชนิเวศน์มฤคทายวัน.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1590059535898-1065c7f89d31?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-textDark text-lg font-bold group-hover:text-blueMain transition-colors">2. พระราชนิเวศน์มฤคทายวัน 📍</h2>
+                        <p class="text-sm text-textMuted leading-relaxed">"พระราชนิเวศน์แห่งความรักและความหวัง" พระราชวังไม้สักทองทอดยาวริมชายหาด สถาปัตยกรรมไทยผสมยุโรปที่โปร่งโล่ง รับลมทะเลได้อย่างงดงามและคลาสสิก</p>
+                        <div class="mt-4 text-xs font-bold text-blueMain flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- สถานที่ 3 -->
+                <a href="https://maps.app.goo.gl/UkJWY2ssWUSFQGyw7" target="_blank" class="card bg-cardWhite shadow-sm hover:shadow-md transition-all hover:-translate-y-1.5 cursor-pointer border border-gray-100 hover:border-blueMain group">
+                    <figure class="h-48 bg-gray-50">
+                        <img src="images/วนอุทยานเขานางพันธุรัต.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1501854140801-50d01698950b?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-textDark text-lg font-bold group-hover:text-blueMain transition-colors">3. วนอุทยานเขานางพันธุรัต 📍</h2>
+                        <p class="text-sm text-textMuted leading-relaxed">เทือกเขาหินปูนสูงตระหง่านที่มีรูปร่างคล้ายนางยักษ์นอนตามวรรณคดีเรื่องสังข์ทอง มีเส้นทางเดินป่าศึกษาธรรมชาติ จุดชมวิวทิวทัศน์เมืองชะอำ และโขดหินสวยแปลกตา</p>
+                        <div class="mt-4 text-xs font-bold text-blueMain flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- สถานที่ 4 -->
+                <div class="card bg-cardWhite shadow-sm hover:shadow-md transition-all hover:-translate-y-1.5 border border-gray-100 hover:border-blueMain group rounded-2xl overflow-hidden">
+                    <a href="https://maps.app.goo.gl/pVZtgCPqbz89pQwG6" target="_blank" rel="noopener noreferrer" class="block h-full">
+                        <figure class="h-48 bg-gray-50 overflow-hidden">
+                            <img src="images/วัดถ้ำแจง.webp" 
+                                alt="วัดถ้ำแจง"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" 
+                                onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1609137144813-2dcc03a274a4?q=80&w=500&auto=format&fit=crop';"/>
+                        </figure>
+                        <div class="card-body p-5">
+                            <h2 class="card-title text-textDark text-lg font-bold group-hover:text-blueMain transition-colors mb-2">
+                                4. วัดถ้ำแจง 📍
+                            </h2>
+                            <p class="text-sm text-textMuted leading-relaxed">
+                                แลนด์มาร์กสายมูสุดอลังการ ประดิษฐาน "พ่อปู่พญาเพชรคีรี มหามุนี ศรีสุทโธนาคราช" รูปปั้นพญานาคองค์ใหญ่ที่สุดในประเทศไทย โดดเด่นด้วยงานปั้นเกล็ดสีเขียวปีกแมลงทับที่ละเอียดละออและงดงาม
+                            </p>
+                            <div class="mt-4 text-xs font-bold text-blueMain flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+                                แตะเพื่อเปิดแผนที่ →
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- สถานที่ 5 -->
+                <a href="https://maps.app.goo.gl/f7PJGM4e4gi9Dia98" target="_blank" class="card bg-cardWhite shadow-sm hover:shadow-md transition-all hover:-translate-y-1.5 cursor-pointer border border-gray-100 hover:border-blueMain group block">
+                    <figure class="h-48 bg-gray-50 overflow-hidden">
+                        <img src="images/คาเมลรีพับลิค.jpg" alt="คาเมล รีพับลิค" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" onerror="this.src='https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-textDark text-lg font-bold group-hover:text-blueMain transition-colors">5. คาเมล รีพับลิค 📍</h2>
+                        <p class="text-sm text-textMuted leading-relaxed">สถานที่ท่องเที่ยวสไตล์ธีมพาร์กที่รวมสวนสัตว์และสวนสนุกเข้าด้วยกัน โดดเด่นด้วยการตกแต่งสถาปัตยกรรมสไตล์โมร็อกโกสีสันสดใส มีกิจกรรมป้อนอาหารอูฐ ยีราฟ อัลปาก้า และมุมถ่ายรูปสวยๆ มากมาย</p>
+                        <div class="mt-4 text-xs font-bold text-blueMain flex items-center gap-1 group-hover:translate-x-1 transition-transform">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+<!-- ที่พักยอดนิยม -->
+       <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-textDark flex items-center gap-3">
+                <span class="bg-textDark w-2.5 h-8 rounded-full"></span>
+                ที่พัก & รีสอร์ทยอดนิยม
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- สถานที่ 1: บ้านไม้บนหาดรีสอร์ท (โทนสีฟ้า - Cyan) -->
+                <div class="card bg-cardWhite shadow-sm border border-gray-100 flex flex-col h-full overflow-hidden rounded-2xl hover:border-cyan-200 transition-all">
+                    <figure class="h-56 relative">
+                        <img src="images/บ้านไม้บนหาดรีสอร์ท.jpg" alt="บ้านไม้บนหาดรีสอร์ท" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=500'" />
+                        <div class="absolute top-4 left-4 badge bg-cyan-500 text-white p-3 font-bold border-none shadow-sm">แคมป์ปิ้ง & ที่พักริมทะเล</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-textDark text-xl font-bold mb-4">1. บ้านไม้บนหาดรีสอร์ท (Wooden House on the Beach)</h2>
+                        <div class="space-y-4 text-sm text-textMuted flex-grow">
+                            <div class="bg-cyan-50/60 p-4 rounded-xl border-l-4 border-cyan-500 shadow-inner text-textDark">
+                                <strong class="text-cyan-600 block mb-1 text-xs uppercase tracking-wider font-bold">📋 ข้อมูลที่พัก:</strong>
+                                <p class="mb-2 text-xs leading-relaxed opacity-90">ลานกางเต็นท์ริมหาดทรายกว้างขวาง ร่มรื่นใต้ทิวสนและลมทะเลชะอำ-บางเก่า บรรยากาศเงียบสงบ เหมาะกับการพักผ่อน มีทั้งพื้นที่กางเต็นท์และบ้านพักเป็นหลังรองรับ</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-cyan-500/20 pt-2 mt-2 font-normal text-textMuted">
+                                    <div>🕒 เวลาลาน: เปิดบริการทุกวัน</div>
+                                    <div>🌊 บรรยากาศ: ริมหาดทรายชายทะเล</div>
+                                    <div>🐾 นำสัตว์เลี้ยงเข้าพักฟรี</div>
+                                    <div>🔌 มีจุดต่อพ่วงกระแสไฟฟ้า</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-textDark/90">
+                                <li class="flex items-center gap-2"><span class="text-cyan-500">💰</span> <strong>ราคาเริ่มต้น:</strong> 300 บาท / คน (รวมอาหารเช้า)</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-500">🚿</span> <strong>ห้องน้ำ:</strong> ห้องน้ำรวม สะอาด แยกชาย-หญิง แยกโซนอาบน้ำ</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-500">⚡</span> <strong>สิ่งอำนวยความสะดวก:</strong> คาเฟ่ริมหาด บริการสั่งหมูกระทะ จุดล้างจาน</li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-gray-100 pt-4">
+                            <a href="https://maps.app.goo.gl/dM61BBfd9syGn1nHA" target="_blank" class="btn bg-cyan-500 hover:bg-cyan-600 text-white w-full border-none shadow-sm font-bold rounded-xl transition-all">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- สถานที่ 2: สอเสือ แคมป์ปิ้ง (โทนสีน้ำเงิน - Blue) -->
+                <div class="card bg-cardWhite shadow-sm border border-gray-100 flex flex-col h-full overflow-hidden rounded-2xl hover:border-blue-200 transition-all">
+                    <figure class="h-56 relative">
+                        <img src="images/สอเสือแคมป์ปิ้ง.jpg" alt="สอเสือ แคมป์ปิ้ง" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1537225228614-5173cac13eea?q=80&w=500'" />
+                        <div class="absolute top-4 left-4 badge bg-blue-600 text-white p-3 font-bold border-none shadow-sm">ลานกางเต็นท์วิวเขา & กิจกรรมน้ำ</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-textDark text-xl font-bold mb-4">2. สอเสือ แคมป์ปิ้ง (SorSuea Camping)</h2>
+                        <div class="space-y-4 text-sm text-textMuted flex-grow">
+                            <div class="bg-blue-50/60 p-4 rounded-xl border-l-4 border-blue-600 shadow-inner text-textDark">
+                                <strong class="text-blue-600 block mb-1 text-xs uppercase tracking-wider font-bold">📋 ข้อมูลที่พัก:</strong>
+                                <p class="mb-2 text-xs leading-relaxed opacity-90">ลานกางเต็นท์ในเขตชะอำท่ามกลางวงล้อมของวิวภูเขาและบ่อน้ำสีฟ้าใสสะอาด พื้นสนามหญ้านุ่มร่มรื่น มีกิจกรรมทางน้ำให้สนุกสนาน และมีบ้านพักสไตล์น็อคดาวน์ให้บริการ</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-blue-600/20 pt-2 mt-2 font-normal text-textMuted">
+                                    <div>🕒 เวลาลาน: เปิดบริการทุกวัน</div>
+                                    <div>⛰️ บรรยากาศ: วิวภูเขาและบ่อน้ำสีฟ้า</div>
+                                    <div>🛶 มีเรือคายัคให้พายฟรี</div>
+                                    <div>🔌 มีจุดพ่วงไฟกระจายรอบลาน</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-textDark/90">
+                                <li class="flex items-center gap-2"><span class="text-blue-600">💰</span> <strong>ราคาเริ่มต้น:</strong> 200 บาท / คน / คืน (นำเต็นท์มาเอง)</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600">🚿</span> <strong>ห้องน้ำ:</strong> ห้องน้ำรวม แยกชาย-หญิง สะอาดสะอ้านดูแลอย่างดี</li>
+                                <li class="flex items-center gap-2"><span class="text-blue-600">⚡</span> <strong>สิ่งอำนวยความสะดวก:</strong> อ่างล้างจาน มีเต็นท์/อุปกรณ์ให้เช่า ลงเล่นน้ำได้</li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-gray-100 pt-4">
+                            <a href="https://maps.app.goo.gl/4cNjscosxTVftFyF9" target="_blank" class="btn bg-blue-600 hover:bg-blue-700 text-white w-full border-none shadow-sm font-bold rounded-xl transition-all">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- สถานที่ 3: Sky&Sea Cha Am Beach (โทนสีคราม/น้ำเงินเข้ม - Indigo) -->
+                <div class="card bg-cardWhite shadow-sm border border-gray-100 flex flex-col h-full overflow-hidden rounded-2xl hover:border-indigo-200 transition-all w-full">
+                    <figure class="h-56 relative w-full">
+                        <img src="images/sky-sea-cha-am.jpg" alt="Sky&Sea Cha Am Beach" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1510312305653-8ed496efae75?q=80&w=500'" />
+                        <div class="absolute top-4 left-4 badge bg-indigo-600 text-white p-3 font-bold border-none shadow-sm z-10">โรงแรมวิวสวยรับลมทะเลหาดชะอำ</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col justify-between">
+                        <div>
+                            <h2 class="card-title text-textDark text-xl font-bold mb-4">3. Sky&Sea Cha Am Beach</h2>
+                            <div class="space-y-4 text-sm text-textMuted">
+                                <div class="bg-indigo-50/60 p-4 rounded-xl border-l-4 border-indigo-600 shadow-inner text-textDark">
+                                    <strong class="text-indigo-600 block mb-1 text-xs uppercase tracking-wider font-bold">📋 ข้อมูลที่พัก:</strong>
+                                    <p class="mb-2 text-xs leading-relaxed opacity-90">ที่พักสุดชิลใกล้ชายหาดชะอำ มาพร้อมการตกแต่งที่เน้นความสบายตา ให้คุณได้พักผ่อนอย่างเต็มที่สัมผัสกลิ่นอายของท้องฟ้าและท้องทะเล บรรยากาศอบอุ่นเป็นกันเอง เหมาะแก่การมาพักผ่อนในวันหยุดสุดสัปดาห์</p>
+                                    <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-indigo-600/20 pt-2 mt-2 font-normal text-textMuted">
+                                        <div>🕒 เวลา: เปิดบริการทุกวัน</div>
+                                        <div>🍃 บรรยากาศ: รับลมทะเล เดินไปหาดชะอำง่ายมาก</div>
+                                        <div>📱 มีบริการ Wi-Fi ความเร็วสูงฟรี</div>
+                                        <div>🦐 ใกล้แหล่งของกินและร้านซีฟู้ดชื่อดัง</div>
+                                    </div>
+                                </div>
+                                <ul class="space-y-2.5 font-medium text-textDark/90">
+                                    <li class="flex items-center gap-2"><span class="text-indigo-600">💰</span> <strong>ราคาเริ่มต้น:</strong> 1,200 - 2,800 บาท / คืน</li>
+                                    <li class="flex items-center gap-2"><span class="text-indigo-600">🚿</span> <strong>ห้องน้ำ:</strong> ห้องน้ำในตัว สะอาด แยกโซนแห้ง-เปียก พร้อมเครื่องทำน้ำอุ่น</li>
+                                    <li class="flex items-center gap-2"><span class="text-indigo-600">⚡</span> <strong>สิ่งอำนวยความสะดวก:</strong> เครื่องปรับอากาศ, ทีวี, ตู้เย็น, อุปกรณ์อาบน้ำครบครัน</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-gray-100 pt-4">
+                            <a href="https://maps.app.goo.gl/R475ictncw22EcRc9" target="_blank" class="btn bg-indigo-600 hover:bg-indigo-700 text-white w-full border-none shadow-sm font-bold rounded-xl transition-all block text-center py-3">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- โซน 6 กิจกรรมสุดฟิน -->
+        <div class="mb-24">
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-textDark flex items-center gap-3 mb-2">
+                    <span class="bg-blueMain w-2.5 h-8 rounded-full"></span>
+                    Checklist เมืองชะอำ : 6 กิจกรรมสุดฟิน 🎒
+                </h3>
+                <p class="text-textMuted text-sm pl-5">เก็บไฮไลท์ความประทับใจเมื่อเดินทางมาเยือนเมืองชายทะเล พักผ่อนสุดฟินที่ชะอำ</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- กิจกรรม 1 -->
+                <div class="flex flex-col gap-3 bg-cardWhite p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-blueMain transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blueLight rounded-xl text-2xl">🏖️</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-textDark">ปูเสื่อริมหาดกินซีฟู้ดสดๆ</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">สัมผัสความฟินขั้นสุดกับการนั่งเก้าอี้ผ้าใบรับลมทะเล สั่งส้มตำและกุ้งหมึกเผาสดๆ จากร้านค้าข้ามฝั่งมาเสิร์ฟร้อนๆ</p>
+                    </div>
+                </div>
+
+                <!-- กิจกรรม 2 -->
+                <div class="flex flex-col gap-3 bg-cardWhite p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-blueMain transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blueLight rounded-xl text-2xl">🐎</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-textDark">ขี่ม้าชมวิวชายหาดชะอำยามเย็น</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">กิจกรรมซิกเนเจอร์ที่ไม่ควรพลาด ลองขึ้นขี่ม้าเดินเลียบชายหาด ถ่ายรูปสวยๆ คู่กับท้องฟ้าสีพาสเทลช่วงพระอาทิตย์ตก</p>
+                    </div>
+                </div>
+
+                <!-- กิจกรรม 3 -->
+                <div class="flex flex-col gap-3 bg-cardWhite p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-blueMain transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blueLight rounded-xl text-2xl">🚲</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-textDark">ปั่นจักรยานรับลมเลียบถนนชายหาด</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">เช่าจักรยานแบบปั่น 2 คน หรือ 3 คนกับเพื่อนๆ ครอบครัว ปั่นรับลมทะเลเย็นๆ ชมทิวสนตลอดแนวชายหาดยาวสุดสายตา</p>
+                    </div>
+                </div>
+
+                <!-- กิจกรรม 4 -->
+                <div class="flex flex-col gap-3 bg-cardWhite p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-blueMain transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blueLight rounded-xl text-2xl">🏛️</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-textDark">ชมสถาปัตยกรรมไม้สักทองริมทะเล</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">เดินเยี่ยมชมความงดงามและเรียนรู้ประวัติศาสตร์ที่พระราชนิเวศน์มฤคทายวัน สัมผัสความร่มรื่นของแมกไม้โบราณ</p>
+                    </div>
+                </div>
+
+                <!-- กิจกรรม 5 -->
+                <div class="flex flex-col gap-3 bg-cardWhite p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-blueMain transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blueLight rounded-xl text-2xl">⛰️</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-textDark">เดินป่าพิชิตจุดชมวิวเขานางพันธุรัต</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">เปลี่ยนบรรยากาศจากทะเลมาเดินขึ้นเขาตามเส้นทางธรรมชาติ ชมกระจกนางพันธุรัต และทัศนียภาพกว้างไกลของชะอำ</p>
+                    </div>
+                </div>
+
+                <!-- กิจกรรม 6 -->
+                <div class="flex flex-col gap-3 bg-cardWhite p-6 rounded-2xl shadow-sm border border-gray-100 hover:border-blueMain transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-blueLight rounded-xl text-2xl">🚤</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-textDark">มันส์กระจายกับบานาน่าโบ๊ทสุดเร้าใจ</h4>
+                        <p class="text-sm text-textMuted leading-relaxed">เติมความตื่นเต้นให้ทริปด้วยการฟอร์มทีมกับเพื่อนๆ ลงเล่นน้ำทะเลและนั่งเรือกล้วยบานาน่าโบ๊ท หรือเจ็ทสกีท้าทายเกลียวคลื่น</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-cyan-500 w-2.5 h-8 rounded-full"></span>
+                รีวิวจากนักท่องเที่ยว 💬
+            </h3>
+            <p class="text-stone-500 text-sm pl-5 mb-8">แบ่งปันประสบการณ์ท่องเที่ยวและพักผ่อนในอำเภอชะอำของคุณที่นี่</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <div id="reviewFormContainer">
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-lg font-bold text-stone-800 flex items-center gap-2 mb-2">
+                        รีวิวทั้งหมด (<span id="reviewCount">0</span>)
+                    </h4>
+                    <div id="reviewsList" class="space-y-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const DISTRICT_KEY = 'cha-am';
+            let editingReviewId = null; // ตัวแปรเก็บสถานะว่ากำลังแก้ไขรีวิวรหัสอะไรอยู่
+
+            document.addEventListener('DOMContentLoaded', function() {
+                initReviewSystem();
+            });
+
+            function initReviewSystem() {
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const formContainer = document.getElementById('reviewFormContainer');
+                
+                if (currentUser) {
+                    const isAdmin = currentUser.username === 'admin';
+                    formContainer.innerHTML = `
+                        <div class="bg-white border border-stone-200/80 p-6 rounded-2xl shadow-sm space-y-4">
+                            <div class="flex items-center gap-3 border-b border-stone-100 pb-3">
+                                <div class="w-10 h-10 ${isAdmin ? 'bg-rose-100 text-rose-800' : 'bg-cyan-100 text-cyan-800'} rounded-full flex items-center justify-center font-bold text-lg">
+                                    ${currentUser.username.charAt(0).toUpperCase()}
+                                </div>
+                                <div>
+                                    <p class="text-stone-800 font-bold text-sm">${currentUser.username}</p>
+                                    <p class="${isAdmin ? 'text-rose-600 font-bold' : 'text-stone-400'} text-xs">${isAdmin ? 'ผู้ดูแลระบบ (Admin)' : 'ผู้ใช้ระบบ'}</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase">ให้คะแนนสถานที่:</label>
+                                <div class="rating rating-md gap-1" id="ratingStars">
+                                    <input type="radio" name="rating-cha-am" class="mask mask-star-2 bg-amber-400" value="1" />
+                                    <input type="radio" name="rating-cha-am" class="mask mask-star-2 bg-amber-400" value="2" />
+                                    <input type="radio" name="rating-cha-am" class="mask mask-star-2 bg-amber-400" value="3" />
+                                    <input type="radio" name="rating-cha-am" class="mask mask-star-2 bg-amber-400" value="4" checked />
+                                    <input type="radio" name="rating-cha-am" class="mask mask-star-2 bg-amber-400" value="5" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase" id="formLabel">ความเห็นของคุณ:</label>
+                                <textarea id="reviewText" class="textarea textarea-bordered w-full rounded-xl bg-stone-50 border-stone-200 focus:outline-none focus:border-cyan-500 h-28 text-sm" placeholder="เขียนรีวิวความประทับใจเกี่ยวกับอำเภอชะอำที่นี่..."></textarea>
+                            </div>
+
+                            <div class="flex flex-col gap-2" id="formActionsContainer">
+                                <button onclick="submitReview()" id="submitBtn" class="btn bg-cyan-500 hover:bg-cyan-600 text-white w-full border-none shadow-md rounded-xl font-bold transition-colors">
+                                    ส่งรีวิวข้อมูล ✨
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    formContainer.innerHTML = `
+                        <div class="bg-cyan-50/50 border border-cyan-100 p-8 rounded-2xl shadow-sm text-center flex flex-col items-center justify-center min-h-[180px]">
+                            <p class="text-stone-700 font-medium mb-4 flex items-center gap-2">
+                                🔒 กรุณาเข้าสู่ระบบเพื่อเขียนรีวิว
+                            </p>
+                            <a href="auth.html" class="btn bg-cyan-500 hover:bg-cyan-600 text-white font-bold border-none shadow-md px-8 rounded-xl transition-all">
+                                ไปหน้าเข้าสู่ระบบ
+                            </a>
+                        </div>
+                    `;
+                }
+
+                displayReviews();
+            }
+
+            function submitReview() {
+                const reviewText = document.getElementById('reviewText').value.trim();
+                if (!reviewText) {
+                    alert('กรุณากรอกข้อความรีวิวก่อนส่งนะคะ');
+                    return;
+                }
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const selectedRating = document.querySelector('input[name="rating-cha-am"]:checked').value;
+                
+                let allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                if (!allReviews[DISTRICT_KEY]) {
+                    allReviews[DISTRICT_KEY] = [];
+                }
+
+                if (editingReviewId) {
+                    // โหมดแก้ไข: ค้นหาตัวที่แมตช์ ID แล้วเปลี่ยนข้อมูล
+                    allReviews[DISTRICT_KEY] = allReviews[DISTRICT_KEY].map(review => {
+                        if (review.id === editingReviewId) {
+                            return {
+                                ...review,
+                                rating: parseInt(selectedRating),
+                                text: reviewText,
+                                date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric' }) + ' (แก้ไขแล้ว)'
+                            };
+                        }
+                        return review;
+                    });
+                    editingReviewId = null;
+                    alert('แก้ไขรีวิวสำเร็จเรียบร้อยแล้วค่ะ!');
+                } else {
+                    // โหมดสร้างใหม่
+                    const newReview = {
+                        id: Date.now(),
+                        username: currentUser.username,
+                        rating: parseInt(selectedRating),
+                        text: reviewText,
+                        date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric' })
+                    };
+                    allReviews[DISTRICT_KEY].unshift(newReview);
+                }
+                
+                localStorage.setItem('reviews', JSON.stringify(allReviews));
+                
+                // รีเซ็ตฟอร์มกลับเป็นปกติ
+                document.getElementById('reviewText').value = '';
+                initReviewSystem();
+            }
+
+            function displayReviews() {
+                const allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                const chaamReviews = allReviews[DISTRICT_KEY] || [];
+                const reviewsList = document.getElementById('reviewsList');
+                document.getElementById('reviewCount').innerText = chaamReviews.length;
+
+                if (chaamReviews.length === 0) {
+                    reviewsList.innerHTML = `
+                        <div class="bg-white border border-stone-200/60 p-8 rounded-2xl shadow-sm flex items-center justify-center min-h-[180px] text-center">
+                            <p class="text-stone-500 font-medium flex items-center gap-2">
+                                🌊 ยังไม่มีรีวิวสำหรับอำเภอชะอำ มาร่วมเขียนรีวิวเป็นคนแรกกันค่ะ!
+                            </p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                let htmlContent = '';
+
+                chaamReviews.forEach(review => {
+                    let starsHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        if (i <= review.rating) {
+                            starsHtml += `<span class="text-amber-400 text-lg">★</span>`;
+                        } else {
+                            starsHtml += `<span class="text-stone-200 text-lg">★</span>`;
+                        }
+                    }
+
+                    // เงื่อนไขในการแสดงปุ่มจัดการรีวิว
+                    let actionButtonsHtml = '';
+                    if (currentUser) {
+                        const isOwner = currentUser.username === review.username;
+                        const isAdmin = currentUser.username === 'admin';
+
+                        if (isOwner) {
+                            actionButtonsHtml = `
+                                <div class="flex gap-2 mt-2 pl-10">
+                                    <button onclick="editReview(${review.id})" class="text-xs bg-cyan-50 text-cyan-700 border border-cyan-200 px-3 py-1.5 rounded-lg hover:bg-cyan-100 transition-all font-bold flex items-center gap-1">✏️ แก้ไข</button>
+                                    <button onclick="deleteReview(${review.id})" class="text-xs bg-stone-50 text-stone-600 border border-stone-200 px-3 py-1.5 rounded-lg hover:bg-stone-100 transition-all font-bold flex items-center gap-1">🗑️ ลบ</button>
+                                </div>
+                            `;
+                        } else if (isAdmin) {
+                            actionButtonsHtml = `
+                                <div class="flex gap-2 mt-2 pl-10">
+                                    <button onclick="deleteReview(${review.id})" class="text-xs bg-rose-600 text-white px-3 py-1.5 rounded-lg hover:bg-rose-700 transition-all font-bold flex items-center gap-1 shadow-sm">⚡ Admin ลบรีวิวนี้</button>
+                                </div>
+                            `;
+                        }
+                    }
+
+                    htmlContent += `
+                        <div class="bg-white border border-stone-100 p-5 rounded-2xl shadow-sm space-y-2 hover:border-cyan-200 transition-colors">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 ${review.username === 'admin' ? 'bg-rose-100 text-rose-800' : 'bg-stone-100 text-stone-700'} rounded-full flex items-center justify-center font-bold text-sm">
+                                        ${review.username.charAt(0).toUpperCase()}
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-stone-800 text-sm">${review.username} ${review.username === 'admin' ? '<span class="badge badge-error text-[10px] text-white p-1 ml-1 bg-rose-600 border-none">Admin</span>' : ''}</h5>
+                                        <div class="flex items-center">${starsHtml}</div>
+                                    </div>
+                                </div>
+                                <span class="text-[11px] text-stone-400 bg-stone-50 px-2.5 py-1 rounded-full font-medium">${review.date}</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed pl-10 pt-1">${review.text}</p>
+                            ${actionButtonsHtml}
+                        </div>
+                    `;
+                });
+
+                reviewsList.innerHTML = htmlContent;
+            }
+
+            function editReview(id) {
+                editingReviewId = id;
+                
+                // ดึงข้อมูลรีวิวมาตรวจหาค่าเพื่อความปลอดภัยของ Syntax
+                const allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                const chaamReviews = allReviews[DISTRICT_KEY] || [];
+                const currentReview = chaamReviews.find(r => r.id === id);
+                
+                if (!currentReview) return;
+
+                // เลื่อนหน้าจอขึ้นไปที่ตัวฟอร์ม
+                document.getElementById('reviewFormContainer').scrollIntoView({ behavior: 'smooth' });
+                
+                // เปลี่ยนข้อความในฟอร์มและ Textarea ให้รองรับโหมดแก้ไข
+                document.getElementById('formLabel').innerText = '✏️ กำลังแก้ไขรีวิวของคุณ:';
+                document.getElementById('reviewText').value = currentReview.text;
+                
+                // ติ๊กเลือกดาวตามคะแนนเดิม
+                const radioToCheck = document.querySelector(`input[name="rating-cha-am"][value="${currentReview.rating}"]`);
+                if (radioToCheck) radioToCheck.checked = true;
+
+                // อัปเดตปุ่มส่งให้มีปุ่มยกเลิกเพิ่มเข้ามา
+                const actionsContainer = document.getElementById('formActionsContainer');
+                actionsContainer.innerHTML = `
+                    <button onclick="submitReview()" class="btn bg-cyan-500 hover:bg-cyan-600 text-white w-full border-none shadow-md rounded-xl font-bold transition-colors">
+                        อัปเดตข้อมูลรีวิว 💾
+                    </button>
+                    <button onclick="cancelEdit()" class="btn btn-ghost text-stone-500 w-full rounded-xl font-medium text-xs">
+                        ยกเลิกการแก้ไข
+                    </button>
+                `;
+            }
+
+            function cancelEdit() {
+                editingReviewId = null;
+                initReviewSystem();
+            }
+
+            function deleteReview(id) {
+                if (confirm('คุณแน่ใจใช่ไหมว่าต้องการลบข้อความรีวิวนี้อย่างถาวร?')) {
+                    let allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                    if (allReviews[DISTRICT_KEY]) {
+                        allReviews[DISTRICT_KEY] = allReviews[DISTRICT_KEY].filter(review => review.id !== id);
+                        localStorage.setItem('reviews', JSON.stringify(allReviews));
+                        alert('ลบข้อมูลรีวิวเรียบร้อยแล้วค่ะ');
+                        
+                        // หากลบไอเท็มตัวที่กำลังแก้อยู่ให้ล้างสถานะฟอร์มด้วย
+                        if (editingReviewId === id) {
+                            editingReviewId = null;
+                            initReviewSystem();
+                        } else {
+                            displayReviews();
+                        }
+                    }
+                }
+            }
+        </script>
+        
+    </main>
+
+</body>
+</html>

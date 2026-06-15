@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>อำเภอเมืองเพชรบุรี</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght=300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+    </style>
+</head>
+<body class="bg-stone-50/60 text-stone-800">
+
+    <!-- แถบนำทาง (Navbar) - โทนส้มมินิมอลละมุน -->
+    <div class="sticky top-0 z-50 bg-white/80 backdrop-blur-md p-4 shadow-sm border-b border-orange-100">
+        <div class="container mx-auto flex justify-between items-center" id="navAuthSection">
+            <a href="index.html" class="btn btn-ghost text-orange-600 font-bold hover:bg-orange-50">
+                ← ย้อนกลับหน้าหลัก
+            </a>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-10 max-w-7xl">
+        
+        <!-- หัวข้อหลักประจำอำเภอ -->
+        <div class="flex flex-col gap-4 border-l-8 border-orange-500 pl-6 mb-12">
+            <h1 class="text-5xl font-bold text-stone-900 tracking-wide">อำเภอเมืองเพชรบุรี</h1>
+            <p class="text-xl text-orange-800/90 font-medium">"พระราชวังบนเขา ถ้ำงดงามตระการตา ย้อนรอยประวัติศาสตร์และทะเลหาดเจ้าสำราญ"</p>
+        </div>
+
+        <!-- รูปภาพหน้าปกหลัก -->
+        <div class="rounded-3xl overflow-hidden shadow-xl mb-16 h-[300px] md:h-[500px] border border-stone-200">
+            <img src="images/muang-main.jpg" 
+                 alt="พระนครคีรี เขาวัง เพชรบุรี" 
+                 class="w-full h-full object-cover">
+        </div>
+
+        <!-- Section: 5 สถานที่แนะนำ -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-orange-500 w-2.5 h-8 rounded-full"></span>
+                5 สถานที่แนะนำ
+            </h3>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- สถานที่ 1 -->
+                <a href="https://maps.app.goo.gl/SqaSeCfksnmQKfA56" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-orange-300">
+                    <figure class="h-48 bg-stone-100">
+                        <img src="images/พระนครคีรี (เขาวัง).jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1590001155093-a3c66ab0c3ff?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-orange-900 text-lg font-bold">1. พระนครคีรี (เขาวัง) 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">โบราณสถานเก่าแก่คู่เมืองเพชรบนยอดเขา ผสมผสานสถาปัตยกรรมไทย จีน และยุโรปอย่างลงตัว นั่งรถรางไฟฟ้าขึ้นไปชมวิวเมืองได้ทั่ว</p>
+                        <div class="mt-4 text-xs font-bold text-orange-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- สถานที่ 2 -->
+                <a href="https://maps.app.goo.gl/Yj3Spb6UaBBgLzEDA" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-orange-300">
+                    <figure class="h-48 bg-stone-100">
+                        <img src="images/ถ้ำเขาหลวง.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1608958416735-3b984fa574bf?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-orange-900 text-lg font-bold">2. ถ้ำเขาหลวง 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">ถ้ำขนาดใหญ่ประดิษฐานพระพุทธรูปโบราณ ไฮไลท์คือปล่องเพดานถ้ำที่มีแสงอาทิตย์ส่องลำแสงลงกระทบพื้นถ้ำอย่างงดงามตระการตา</p>
+                        <div class="mt-4 text-xs font-bold text-orange-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- สถานที่ 3 -->
+                <a href="https://maps.app.goo.gl/cbVBQ6Tor4MQKU5j6" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-orange-300">
+                    <figure class="h-48 bg-stone-100">
+                        <img src="images/พระรามราชนิเวศน์ (วังบ้านปืน).jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1599946347371-68eb71b16afc?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-orange-900 text-lg font-bold">3. พระรามราชนิเวศน์ (วังบ้านปืน) 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">พระราชวังตากอากาศสไตล์โมเดิร์นแบบเยอรมันของรัชกาลที่ 5 ตัวอาคารสวยงามสะดุดตา ตั้งอยู่ริมแม่น้ำเพชรบุรี บรรยากาศร่มรื่นมาก</p>
+                        <div class="mt-4 text-xs font-bold text-orange-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- สถานที่ 4 -->
+                <a href="https://maps.app.goo.gl/W5ZsXeoPpcr7qRE16" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-orange-300">
+                    <figure class="h-48 bg-stone-100">
+                        <img src="images/หาดเจ้าสำราญ.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-orange-900 text-lg font-bold">4. หาดเจ้าสำราญ 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">ชายหาดขึ้นชื่อของอำเภอเมือง ทรายละเอียด ลมพัดเย็นสบาย บรรยากาศเงียบสงบไม่พลุกพล่าน เหมาะมาพักผ่อน ทานอาหารทะเลริมหาด</p>
+                        <div class="mt-4 text-xs font-bold text-orange-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+
+                <!-- สถานที่ 5 -->
+                <a href="https://maps.app.goo.gl/uvVRjZhPUjdUMoXCA" target="_blank" class="card bg-white shadow-md hover:shadow-xl transition-all hover:-translate-y-1.5 cursor-pointer border border-stone-200/60 hover:border-orange-300">
+                    <figure class="h-48 bg-stone-100">
+                        <img src="images/ชุมชนตลาดริมน้ำเพชรบุรี.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=500&auto=format&fit=crop'"/>
+                    </figure>
+                    <div class="card-body p-5">
+                        <h2 class="card-title text-orange-900 text-lg font-bold">5. ชุมชนตลาดริมน้ำเพชรบุรี 📍</h2>
+                        <p class="text-sm text-stone-600 leading-relaxed">ย่านตึกแถวโบราณริมแม่น้ำ แหล่งรวมของอร่อยเมืองเพชรและขนมหวาน ตกแต่งด้วยภาพวาด Street Art เล่าเรื่องวิถีชีวิตชุมชนสุดน่ารัก</p>
+                        <div class="mt-4 text-xs font-bold text-orange-600 flex items-center gap-1">แตะเพื่อเปิดแผนที่ →</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Section: ที่พัก & ลานกางเต็นท์ยอดนิยม -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-orange-500 w-2.5 h-8 rounded-full"></span>
+                ที่พัก & ลานกางเต็นท์ยอดนิยม
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 p-1">
+                <!-- ที่พัก 1: โทนส้มอิฐอบอุ่น (แคมป์ปิ้งริมทะเล) -->
+                <div class="card bg-white shadow-lg border border-stone-100 flex flex-col h-full overflow-hidden">
+                    <figure class="h-56 relative">
+                        <img src="images/ลานกางเต็นท์ ยอดแหลมแคมป์ปิ้ง.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=500&auto=format&fit=crop'" />
+                        <div class="absolute top-4 left-4 badge bg-orange-600 text-white p-3 font-bold border-none shadow-md">แคมป์ปิ้งริมทะเล</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-stone-800 text-xl font-bold mb-4">1. ลานกางเต็นท์ ยอดแหลมแคมป์ปิ้ง</h2>
+                        <div class="space-y-4 text-sm text-stone-600 flex-grow">
+                            <div class="bg-orange-50 p-4 rounded-xl border-l-4 border-orange-500 shadow-inner text-stone-700">
+                                <strong class="text-orange-800 block mb-1 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="mb-2 text-stone-600 text-xs leading-relaxed">ลานกางเต็นท์สุดชิลบริเวณปลายแหลมผักเบี้ย บรรยากาศเงียบสงบรับลมทะเลเต็มๆ ตื่นมาชมพระอาทิตย์ขึ้นจากขอบฟ้าได้แบบพาโนรามา</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-orange-200 pt-2 mt-2 font-normal text-stone-500">
+                                    <div>🕒 Check-in: 14:00 น. เป็นต้นไป</div>
+                                    <div>🚪 พื้นที่ส่วนตัว เงียบสงบ</div>
+                                    <div>🐶 นำสัตว์เลี้ยงเข้าได้</div>
+                                    <div>🎣 ทำกิจกรรมทางทะเลได้</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-stone-700">
+                                <li class="flex items-center gap-2"><span class="text-orange-500">💰</span> <strong>ค่าบริการ:</strong> ประมาณ 150 - 200.- / คน / คืน</li>
+                                <li class="flex items-center gap-2"><span class="text-orange-500">🚿</span> <strong>ห้องน้ำ:</strong> มีห้องน้ำและห้องอาบน้ำแยกชาย-หญิง</li>
+                                <li class="flex items-center gap-2"><span class="text-orange-500">⚡</span> <strong>ไฟฟ้า:</strong> มีจุดต่อปลั๊กไฟพ่วงบริการ</li>
+                                <li class="flex items-center gap-2"><span class="text-orange-500">📶</span> <strong>สัญญาณ:</strong> เข้าถึงครบทุกค่ายใหญ่</li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/GtNZdgweJYMhzs9S8" target="_blank" class="btn bg-orange-500 hover:bg-orange-600 text-white w-full border-none shadow-md">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ที่พัก 2: โทนเขียวโอลีฟธรรมชาติ (รับลมทิวสน) -->
+                <div class="card bg-white shadow-lg border border-stone-100 flex flex-col h-full overflow-hidden">
+                    <figure class="h-56 relative">
+                        <img src="images/จุดกางเต็นท์หาดจอมพล.jpg" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1533873984035-25970ab07461?q=80&w=500&auto=format&fit=crop'" />
+                        <div class="absolute top-4 left-4 badge bg-olive bg-stone-700 text-white p-3 font-bold border-none shadow-md">รับลมชมคลื่น หาดเจ้าสำราญ</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-stone-800 text-xl font-bold mb-4">2. จุดกางเต็นท์หาดจอมพล</h2>
+                        <div class="space-y-4 text-sm text-stone-600 flex-grow">
+                            <div class="bg-stone-100 p-4 rounded-xl border-l-4 border-stone-500 shadow-inner text-stone-700">
+                                <strong class="text-stone-700 block mb-1 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="mb-2 text-stone-600 text-xs leading-relaxed">ลานกางเต็นท์ริมหาดทรายขาว ใกล้กับหาดเจ้าสำราญ ใต้ร่มเงาทิวสนอันร่มรื่น ลมพัดเย็นสบายตลอดทั้งวัน เหมาะสำหรับสายแคมป์ปิ้งริมทะเลตัวจริง</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-stone-300 pt-2 mt-2 font-normal text-stone-500">
+                                    <div>🕒 เปิดบริการทุกวัน</div>
+                                    <div>🚪 มีเจ้าหน้าที่ดูแลปลอดภัย</div>
+                                    <div>🐶 นำสัตว์เลี้ยงเข้าพักได้</div>
+                                    <div>🍢 ประกอบอาหาร ปิ้งย่างได้</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-stone-700">
+                                <li class="flex items-start gap-2"><span class="text-stone-600 mt-0.5">💰</span> <strong>ราคา:</strong> เริ่มต้นประมาณ 100 - 150.- / คืน</li>
+                                <li class="flex items-start gap-2"><span class="text-stone-600 mt-0.5">🚿</span> <strong>ห้องน้ำ:</strong> มีห้องน้ำสาธารณะพร้อมจุดล้างตัว</li>
+                                <li class="flex items-start gap-2"><span class="text-stone-600 mt-0.5">⚡</span> <strong>ไฟฟ้า:</strong> ควรเตรียมแบตสำรองหรือปลั๊กพ่วงมาเผื่อ</li>
+                                <li class="flex items-start gap-2"><span class="text-stone-600 mt-0.5">📶</span> <strong>สัญญาณ:</strong> สัญญาณ 4G/5G เต็มเปี่ยม</li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/Kbkm8SovoSEEfTUY6" target="_blank" class="btn bg-stone-600 hover:bg-stone-700 text-white w-full border-none shadow-md">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ที่พัก 3: โทนฟ้าครามน้ำทะเลพรีเมียม (โรงแรมติดชายหาด) -->
+                <div class="card bg-white shadow-lg border border-stone-100 flex flex-col h-full overflow-hidden">
+                    <figure class="h-56 relative">
+                        <img src="images/Lay Sea and Beach.webp" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?q=80&w=500&auto=format&fit=crop'" />
+                        <div class="absolute top-4 left-4 badge bg-cyan-700 text-white p-3 font-bold border-none shadow-md">โรงแรมติดชายหาด</div>
+                    </figure>
+                    <div class="card-body p-6 flex flex-col">
+                        <h2 class="card-title text-cyan-900 text-xl font-bold mb-4">3. Lay Sea and Beach</h2>
+                        <div class="space-y-4 text-sm text-stone-600 flex-grow">
+                            <div class="bg-cyan-50 p-4 rounded-xl border-l-4 border-cyan-500 shadow-inner text-cyan-900">
+                                <strong class="text-cyan-800 block mb-1 text-xs uppercase tracking-wider font-bold">📋 จุดเด่น & ข้อมูลสำคัญ:</strong>
+                                <p class="mb-2 text-stone-600 text-xs leading-relaxed">โรงแรมดีไซน์โมเดิร์นตั้งอยู่ริมชายหาดเจ้าสำราญ เดินออกจากห้องพักไม่กี่ก้าวก็ถึงทะเล บรรยากาศส่วนตัว สระว่ายน้ำสวย ถ่ายรูปขึ้นกล้องสุดๆ</p>
+                                <div class="grid grid-cols-2 gap-1.5 text-[11px] border-t border-cyan-200 pt-2 mt-2 font-normal text-cyan-700/70">
+                                    <div>🕒 Check-in: หลัง 14:00 น.</div>
+                                    <div>🏊‍♂️ มีสระว่ายน้ำกลางแจ้งริมทะเล</div>
+                                    <div>🍳 บริการอาหารเช้า</div>
+                                    <div>🚗 มีพื้นที่จอดรถกว้างขวาง</div>
+                                </div>
+                            </div>
+                            <ul class="space-y-2.5 font-medium text-stone-700">
+                                <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">💰</span> <strong>ราคา:</strong> เริ่มต้นประมาณ 1,500 - 3,500.- / คืน</li>
+                                <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">🚿</span> <strong>ห้องน้ำ:</strong> ห้องน้ำส่วนตัวระดับโรงแรมพร้อมของใช้ครบ</li>
+                                <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">⚡</span> <strong>ไฟฟ้า:</strong> ระบบไฟโรงแรม 24 ชม. พร้อมแอร์ฉ่ำ</li>
+                                <li class="flex items-start gap-2"><span class="text-cyan-600 mt-0.5">📶</span> <strong>สัญญาณ:</strong> ฟรี High-speed Wi-Fi ทั่วบริเวณ</li>
+                            </ul>
+                        </div>
+                        <div class="card-actions mt-6 border-t border-stone-100 pt-4">
+                            <a href="https://maps.app.goo.gl/oau8poZodJ31PkGMA" target="_blank" class="btn bg-cyan-600 hover:bg-cyan-700 text-white w-full border-none shadow-md">
+                                📍 นำทางไป (Google Maps)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Checklist เมืองเพชร -->
+        <div class="mb-24">
+            <div class="mb-8">
+                <h3 class="text-3xl font-bold text-stone-900 flex items-center gap-3 mb-2">
+                    <span class="bg-orange-500 w-2.5 h-8 rounded-full"></span>
+                    Checklist เมืองเพชร : 6 กิจกรรมสุดฟินอินเมืองประวัติศาสตร์ 🎒
+                </h3>
+                <p class="text-stone-500 text-sm pl-5">เที่ยวอำเภอเมืองทั้งที ต้องเก็บแลนด์มาร์คโบราณและของอร่อยเมืองเพชรให้ครบ!</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-orange-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-orange-50 rounded-xl text-2xl">🐒</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">นั่งรถรางไฟฟ้าขึ้นเขาวัง</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">สัมผัสลมเย็นด้านบนพระนครคีรี ถ่ายรูปสถาปัตยกรรมเก่าแก่สุดคลาสสิก และระวังเหล่าน้องลิงเจ้าถิ่นด้วยนะ</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-orange-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-orange-50 rounded-xl text-2xl">✨</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ชมแสงอาทิตย์ส่องปล่องถ้ำหลวง</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">เข้าไปกราบพระพุทธรูปโบราณในถ้ำเขาหลวง และรอชมลำแสงธรรมชาติที่ส่องลงมาตรงกลางถ้ำ เป็นภาพที่สวยงามแปลกตามาก</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-orange-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-orange-50 rounded-xl text-2xl">🍧</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ตามล่าของอร่อยและขนมหวานเมืองเพชร</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">แวะย่านตลาดเก่าริมน้ำ ชิมก๋วยเตี๋ยวน้ำแดงรสเด็ด ลอดช่องน้ำตาลข้น และซื้อขนมหม้อแกงแท้ๆ กลับไปเป็นของฝาก</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-orange-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-orange-50 rounded-xl text-2xl">🌊</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">เดินรับลมชิลๆ ที่หาดเจ้าสำราญ</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">ถอดรองเท้าเดินย่ำทรายนุ่มๆ ฟังเสียงคลื่นรับลมทะเล หรือจะสั่งส้มตำอาหารทะเลสดๆ มาทานริมหาดฟินๆ</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-orange-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-orange-50 rounded-xl text-2xl">📸</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ถ่ายรูปชิคๆ กับ Street Art ริมน้ำ</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">เดินเล่นชมบ้านไม้เก่าแก่โบราณ พร้อมแวะแชะภาพคู่กับภาพวาดสตรีทอาร์ตตามฝาผนังที่สะท้อนเอกลักษณ์ของชุมชน</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-col gap-3 bg-white p-6 rounded-2xl shadow-sm border border-stone-200/60 hover:border-orange-200 transition-colors">
+                    <div class="w-12 h-12 flex items-center justify-center bg-orange-50 rounded-xl text-2xl">🏰</div>
+                    <div>
+                        <h4 class="font-bold text-lg text-stone-800">ชมความงามของวังบ้านปืน</h4>
+                        <p class="text-sm text-stone-500 leading-relaxed">เดินชมพระรามราชนิเวศน์ พระราชวังยุโรปสไตล์เยอรมันที่งดงามตระการตา และถ่ายรูปคู่กับสวนหย่อมสีเขียวโดยรอบ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: รีวิวจากนักท่องเที่ยว -->
+        <div class="mb-24">
+            <h3 class="text-3xl font-bold mb-8 text-stone-900 flex items-center gap-3">
+                <span class="bg-orange-500 w-2.5 h-8 rounded-full"></span>
+                รีวิวจากนักท่องเที่ยว 💬
+            </h3>
+            <p class="text-stone-500 text-sm pl-5 mb-8">แบ่งปันประสบการณ์ท่องเที่ยวและพักผ่อนในอำเภอเมืองเพชรบุรีของคุณที่นี่</p>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                <div id="reviewFormContainer">
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <h4 class="text-lg font-bold text-stone-800 flex items-center gap-2 mb-2">
+                        รีวิวทั้งหมด (<span id="reviewCount">0</span>)
+                    </h4>
+                    <div id="reviewsList" class="space-y-4">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            const DISTRICT_KEY = 'muang';
+            let editingReviewId = null; // ตัวแปรเก็บสถานะว่ากำลังแก้ไขรีวิวรหัสอะไรอยู่
+
+            document.addEventListener('DOMContentLoaded', function() {
+                initReviewSystem();
+            });
+
+            function initReviewSystem() {
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const formContainer = document.getElementById('reviewFormContainer');
+                
+                if (currentUser) {
+                    const isAdmin = currentUser.username === 'admin';
+                    formContainer.innerHTML = `
+                        <div class="bg-white border border-stone-200/80 p-6 rounded-2xl shadow-sm space-y-4">
+                            <div class="flex items-center gap-3 border-b border-stone-100 pb-3">
+                                <div class="w-10 h-10 ${isAdmin ? 'bg-rose-100 text-rose-800' : 'bg-emerald-100 text-emerald-800'} rounded-full flex items-center justify-center font-bold text-lg">
+                                    ${currentUser.username.charAt(0).toUpperCase()}
+                                </div>
+                                <div>
+                                    <p class="text-stone-800 font-bold text-sm">${currentUser.username}</p>
+                                    <p class="${isAdmin ? 'text-rose-600 font-bold' : 'text-stone-400'} text-xs">${isAdmin ? 'ผู้ดูแลระบบ (Admin)' : 'ผู้ใช้ระบบ'}</p>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase">ให้คะแนนสถานที่:</label>
+                                <div class="rating rating-md gap-1" id="ratingStars">
+                                    <input type="radio" name="rating-muang" class="mask mask-star-2 bg-amber-400" value="1" />
+                                    <input type="radio" name="rating-muang" class="mask mask-star-2 bg-amber-400" value="2" />
+                                    <input type="radio" name="rating-muang" class="mask mask-star-2 bg-amber-400" value="3" />
+                                    <input type="radio" name="rating-muang" class="mask mask-star-2 bg-amber-400" value="4" checked />
+                                    <input type="radio" name="rating-muang" class="mask mask-star-2 bg-amber-400" value="5" />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="label text-xs font-bold text-stone-600 uppercase" id="formLabel">ความเห็นของคุณ:</label>
+                                <textarea id="reviewText" class="textarea textarea-bordered w-full rounded-xl bg-stone-50 border-stone-200 focus:outline-none focus:border-emerald-500 h-28 text-sm" placeholder="เขียนรีวิวความประทับใจเกี่ยวกับอำเภอเมืองเพชรบุรีที่นี่..."></textarea>
+                            </div>
+
+                            <div class="flex flex-col gap-2" id="formActionsContainer">
+                                <button onclick="submitReview()" id="submitBtn" class="btn bg-orange-500 hover:bg-orange-600 text-white w-full border-none shadow-md rounded-xl font-bold transition-colors">
+                                    ส่งรีวิวข้อมูล ✨
+                                </button>
+                            </div>
+                        </div>
+                    `;
+                } else {
+                    formContainer.innerHTML = `
+                        <div class="bg-emerald-50/50 border border-emerald-100 p-8 rounded-2xl shadow-sm text-center flex flex-col items-center justify-center min-h-[180px]">
+                            <p class="text-stone-700 font-medium mb-4 flex items-center gap-2">
+                                🔒 กรุณาเข้าสู่ระบบเพื่อเขียนรีวิว
+                            </p>
+                            <a href="auth.html" class="btn bg-emerald-700 hover:bg-emerald-800 text-white font-bold border-none shadow-md px-8 rounded-xl transition-all">
+                                ไปหน้าเข้าสู่ระบบ
+                            </a>
+                        </div>
+                    `;
+                }
+
+                displayReviews();
+            }
+
+            function submitReview() {
+                const reviewText = document.getElementById('reviewText').value.trim();
+                if (!reviewText) {
+                    alert('กรุณากรอกข้อความรีวิวก่อนส่งนะคะ');
+                    return;
+                }
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                const selectedRating = document.querySelector('input[name="rating-muang"]:checked').value;
+                
+                let allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                if (!allReviews[DISTRICT_KEY]) {
+                    allReviews[DISTRICT_KEY] = [];
+                }
+
+                if (editingReviewId) {
+                    // โหมดแก้ไข: ค้นหาตัวที่แมตช์ ID แล้วเปลี่ยนข้อมูล
+                    allReviews[DISTRICT_KEY] = allReviews[DISTRICT_KEY].map(review => {
+                        if (review.id === editingReviewId) {
+                            return {
+                                ...review,
+                                rating: parseInt(selectedRating),
+                                text: reviewText,
+                                date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric' }) + ' (แก้ไขแล้ว)'
+                            };
+                        }
+                        return review;
+                    });
+                    editingReviewId = null;
+                    alert('แก้ไขรีวิวสำเร็จเรียบร้อยแล้วค่ะ!');
+                } else {
+                    // โหมดสร้างใหม่
+                    const newReview = {
+                        id: Date.now(),
+                        username: currentUser.username,
+                        rating: parseInt(selectedRating),
+                        text: reviewText,
+                        date: new Date().toLocaleDateString('th-TH', { year: 'numeric', month: 'short', day: 'numeric' })
+                    };
+                    allReviews[DISTRICT_KEY].unshift(newReview);
+                }
+                
+                localStorage.setItem('reviews', JSON.stringify(allReviews));
+                
+                // รีเซ็ตฟอร์มกลับเป็นปกติ
+                document.getElementById('reviewText').value = '';
+                initReviewSystem();
+            }
+
+            function displayReviews() {
+                const allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                const muangReviews = allReviews[DISTRICT_KEY] || [];
+                const reviewsList = document.getElementById('reviewsList');
+                document.getElementById('reviewCount').innerText = muangReviews.length;
+
+                if (muangReviews.length === 0) {
+                    reviewsList.innerHTML = `
+                        <div class="bg-white border border-stone-200/60 p-8 rounded-2xl shadow-sm flex items-center justify-center min-h-[180px] text-center">
+                            <p class="text-stone-500 font-medium flex items-center gap-2">
+                                🍃 ยังไม่มีรีวิวสำหรับอำเภอเมือง มาร่วมเขียนรีวิวเป็นคนแรกกันค่ะ!
+                            </p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+                let htmlContent = '';
+
+                muangReviews.forEach(review => {
+                    let starsHtml = '';
+                    for (let i = 1; i <= 5; i++) {
+                        if (i <= review.rating) {
+                            starsHtml += `<span class="text-amber-400 text-lg">★</span>`;
+                        } else {
+                            starsHtml += `<span class="text-stone-200 text-lg">★</span>`;
+                        }
+                    }
+
+                    // เงื่อนไขในการแสดงปุ่มจัดการรีวิว
+                    let actionButtonsHtml = '';
+                    if (currentUser) {
+                        const isOwner = currentUser.username === review.username;
+                        const isAdmin = currentUser.username === 'admin';
+
+                        if (isOwner) {
+                            actionButtonsHtml = `
+                                <div class="flex gap-2 mt-2 pl-10">
+                                    <button onclick="editReview(${review.id})" class="text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-3 py-1.5 rounded-lg hover:bg-emerald-100 transition-all font-bold flex items-center gap-1">✏️ แก้ไข</button>
+                                    <button onclick="deleteReview(${review.id})" class="text-xs bg-stone-50 text-stone-600 border border-stone-200 px-3 py-1.5 rounded-lg hover:bg-stone-100 transition-all font-bold flex items-center gap-1">🗑️ ลบ</button>
+                                </div>
+                            `;
+                        } else if (isAdmin) {
+                            actionButtonsHtml = `
+                                <div class="flex gap-2 mt-2 pl-10">
+                                    <button onclick="deleteReview(${review.id})" class="text-xs bg-rose-600 text-white px-3 py-1.5 rounded-lg hover:bg-rose-700 transition-all font-bold flex items-center gap-1 shadow-sm">⚡ Admin ลบรีวิวนี้</button>
+                                </div>
+                            `;
+                        }
+                    }
+
+                    htmlContent += `
+                        <div class="bg-white border border-stone-100 p-5 rounded-2xl shadow-sm space-y-2 hover:border-emerald-100 transition-colors">
+                            <div class="flex justify-between items-start">
+                                <div class="flex items-center gap-2.5">
+                                    <div class="w-8 h-8 ${review.username === 'admin' ? 'bg-rose-100 text-rose-800' : 'bg-stone-100 text-stone-700'} rounded-full flex items-center justify-center font-bold text-sm">
+                                        ${review.username.charAt(0).toUpperCase()}
+                                    </div>
+                                    <div>
+                                        <h5 class="font-bold text-stone-800 text-sm">${review.username} ${review.username === 'admin' ? '<span class="badge badge-error text-[10px] text-white p-1 ml-1 bg-rose-600 border-none">Admin</span>' : ''}</h5>
+                                        <div class="flex items-center">${starsHtml}</div>
+                                    </div>
+                                </div>
+                                <span class="text-[11px] text-stone-400 bg-stone-50 px-2.5 py-1 rounded-full font-medium">${review.date}</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed pl-10 pt-1">${review.text}</p>
+                            ${actionButtonsHtml}
+                        </div>
+                    `;
+                });
+
+                reviewsList.innerHTML = htmlContent;
+            }
+
+            function editReview(id) {
+                editingReviewId = id;
+                
+                // ดึงข้อมูลรีวิวมาตรวจหาค่าเพื่อความปลอดภัยของ Syntax
+                const allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                const muangReviews = allReviews[DISTRICT_KEY] || [];
+                const currentReview = muangReviews.find(r => r.id === id);
+                
+                if (!currentReview) return;
+
+                // เลื่อนหน้าจอขึ้นไปที่ตัวฟอร์ม
+                document.getElementById('reviewFormContainer').scrollIntoView({ behavior: 'smooth' });
+                
+                // เปลี่ยนข้อความในฟอร์มและ Textarea ให้รองรับโหมดแก้ไข
+                document.getElementById('formLabel').innerText = '✏️ กำลังแก้ไขรีวิวของคุณ:';
+                document.getElementById('reviewText').value = currentReview.text;
+                
+                // ติ๊กเลือกดาวตามคะแนนเดิม
+                const radioToCheck = document.querySelector(`input[name="rating-muang"][value="${currentReview.rating}"]`);
+                if (radioToCheck) radioToCheck.checked = true;
+
+                // อัปเดตปุ่มส่งให้มีปุ่มยกเลิกเพิ่มเข้ามา
+                const actionsContainer = document.getElementById('formActionsContainer');
+                actionsContainer.innerHTML = `
+                    <button onclick="submitReview()" class="btn bg-emerald-700 hover:bg-emerald-800 text-white w-full border-none shadow-md rounded-xl font-bold transition-colors">
+                        อัปเดตข้อมูลรีวิว 💾
+                    </button>
+                    <button onclick="cancelEdit()" class="btn btn-ghost text-stone-500 w-full rounded-xl font-medium text-xs">
+                        ยกเลิกการแก้ไข
+                    </button>
+                `;
+            }
+
+            function cancelEdit() {
+                editingReviewId = null;
+                initReviewSystem();
+            }
+
+            function deleteReview(id) {
+                if (confirm('คุณแน่ใจใช่ไหมว่าต้องการลบข้อความรีวิวนี้อย่างถาวร?')) {
+                    let allReviews = JSON.parse(localStorage.getItem('reviews')) || {};
+                    if (allReviews[DISTRICT_KEY]) {
+                        allReviews[DISTRICT_KEY] = allReviews[DISTRICT_KEY].filter(review => review.id !== id);
+                        localStorage.setItem('reviews', JSON.stringify(allReviews));
+                        alert('ลบข้อมูลรีวิวเรียบร้อยแล้วค่ะ');
+                        
+                        // หากลบไอเท็มตัวที่กำลังแก้อยู่ให้ล้างสถานะฟอร์มด้วย
+                        if (editingReviewId === id) {
+                            editingReviewId = null;
+                            initReviewSystem();
+                        } else {
+                            displayReviews();
+                        }
+                    }
+                }
+            }
+        </script>
+
+    </main>
+</body>
+</html>
