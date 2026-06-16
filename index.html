@@ -14,20 +14,29 @@
 </head>
 <body class="bg-slate-50 text-slate-800">
 
-    <div class="navbar bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 px-4 md:px-12">
+    <!-- Navbar Responsive สำหรับคอมพิวเตอร์และมือถือ -->
+    <div class="navbar bg-white/90 backdrop-blur shadow-sm sticky top-0 z-50 px-2 md:px-12">
         <div class="navbar-start">
             <div class="dropdown">
-                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden px-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                 </div>
                 <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-medium">
                     <li><a href="#zone-highland">โซนป่าเขาสูง</a></li>
                     <li><a href="#zone-inland">โซนลุ่มน้ำ</a></li>
                     <li><a href="#zone-coastal">โซนชายฝั่ง</a></li>
+                    <div class="divider my-1"></div>
+                    <!-- 🎯 ปุ่ม AI สำหรับโทรศัพท์มือถือ -> ลิงก์ไปหน้า chat.html เรียบร้อยแล้วค่ะ -->
+                    <li>
+                        <a href="chat.html" class="bg-teal-50 text-teal-700 font-bold hover:bg-teal-100 justify-center">
+                            🤖 ปรึกษา AI
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <a class="text-xl font-bold text-green-800 tracking-tight">PHET<span class="text-emerald-500">ECO-CAMP</span></a>
+            <a class="text-lg md:text-xl font-bold text-green-800 tracking-tight ml-1">PHET<span class="text-emerald-500">ECO-CAMP</span></a>
         </div>
+        
         <div class="navbar-center hidden lg:flex font-medium">
             <ul class="menu menu-horizontal px-1 gap-2">
                 <li><a href="#zone-highland" class="hover:text-emerald-600">โซนป่าเขาสูง</a></li>
@@ -36,9 +45,14 @@
             </ul>
         </div>
         
-        <div class="navbar-end gap-3 flex items-center" id="navAuthSection">
-            <a href="auth.html" class="btn btn-emerald bg-emerald-600 hover:bg-emerald-700 text-white btn-sm rounded-xl border-none font-bold shadow-sm">
-                เข้าสู่ระบบ / สมัครสมาชิก 👤
+        <div class="navbar-end gap-1.5 md:gap-3 flex items-center" id="navAuthSection">
+            <!-- 🎯 ปุ่มปรึกษา AI สำหรับหน้าจอคอมพิวเตอร์ -> ลิงก์ไปหน้า chat.html เรียบร้อยแล้วค่ะ -->
+            <a href="chat.html" class="hidden sm:inline-flex btn bg-teal-600 hover:bg-teal-700 text-white btn-sm rounded-xl font-bold border-none shadow-sm items-center gap-1">
+                🤖 ปรึกษา AI
+            </a>
+            
+            <a href="auth.html" class="btn btn-emerald bg-emerald-600 hover:bg-emerald-700 text-white btn-sm text-xs md:text-sm rounded-xl border-none font-bold shadow-sm">
+                เข้าสู่ระบบ 👤
             </a>
         </div>
     </div>
@@ -235,28 +249,31 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const navAuthSection = document.getElementById('navAuthSection');
-            
-            // เช็กก่อนว่ามีพื้นที่แสดงปุ่มสมาชิกในหน้าหลักไหม ป้องกันโค้ดพัง
             if (!navAuthSection) return;
 
-            // ดึงข้อมูลผู้ใช้ปัจจุบันจาก LocalStorage
             const currentUser = JSON.parse(localStorage.getItem('currentUser'));
 
             if (currentUser) {
-                // สถานะล็อกอินแล้ว: ปรับหน้าตาปุ่มใน Navbar ให้รองรับปุ่ม "แก้ไขข้อมูล"
+                // กรณีล็อกอินแล้ว: ปรับดีไซน์ปุ่มรองรับทุกขนาดหน้าจอ และมีลิงก์ chat.html ตัวเดียวกัน
                 navAuthSection.innerHTML = `
-                    <div class="text-sm font-medium text-slate-700 bg-slate-100 px-3 py-1.5 rounded-xl border border-slate-200">
-                        สวัสดีคุณ <strong class="text-emerald-700">${currentUser.username}</strong> 👋
+                    <div class="text-xs md:text-sm font-medium text-slate-700 bg-slate-100 px-2 md:px-3 py-1.5 rounded-xl border border-slate-200 truncate max-w-[80px] sm:max-w-none">
+                        👤 ${currentUser.username}
                     </div>
-                    <button onclick="const modal = document.getElementById('edit_profile_modal'); if(modal) modal.showModal();" class="btn btn-warning btn-outline btn-sm rounded-xl font-bold">
-                        ⚙️ แก้ไขข้อมูล
+                    
+                    <!-- 🎯 ปุ่มปรึกษา AI (หลังล็อกอิน) -> ลิงก์ไปหน้า chat.html -->
+                    <a href="chat.html" class="hidden sm:inline-flex btn bg-teal-600 hover:bg-teal-700 text-white btn-sm rounded-xl font-bold border-none shadow-sm items-center gap-1">
+                        🤖 ปรึกษา AI
+                    </a>
+                    
+                    <button onclick="const modal = document.getElementById('edit_profile_modal'); if(modal) modal.showModal();" class="btn btn-warning btn-outline btn-xs md:btn-sm rounded-xl font-bold px-2">
+                        ⚙️ <span class="hidden md:inline">แก้ไขข้อมูล</span>
                     </button>
-                    <button id="logoutBtn" class="btn btn-error btn-outline btn-sm rounded-xl font-bold">
-                        ออกจากระบบ
+                    
+                    <button id="logoutBtn" class="btn btn-error btn-outline btn-xs md:btn-sm rounded-xl font-bold px-2">
+                        <span class="hidden md:inline">ออกจากระบบ</span>❌
                     </button>
                 `;
 
-                // ป้องกันเออร์เรอร์หากไม่มีกล่อง Modal ในหน้าหลัก
                 const editUsernameField = document.getElementById('mainEditUsername');
                 const emailTxtField = document.getElementById('mainEmailTxt');
                 const editPasswordField = document.getElementById('mainEditPassword');
@@ -264,14 +281,12 @@
                 if (editUsernameField) editUsernameField.value = currentUser.username;
                 if (emailTxtField) emailTxtField.innerText = `อีเมลบัญชี: ${currentUser.email}`;
 
-                // บล็อกสิทธิ์ Admin สูงสุดไว้ป้องกันระบบหลังบ้านพัง
                 if (currentUser.username === 'admin') {
                     if (editUsernameField) editUsernameField.disabled = true;
                     if (editPasswordField) editPasswordField.disabled = true;
                     if (emailTxtField) emailTxtField.innerText = "บัญชีผู้ดูแลระบบสูงสุด (ไม่สามารถแก้ไขได้)";
                 }
 
-                // ฝังคำสั่งให้ปุ่มออกจากระบบ
                 const logoutBtn = document.getElementById('logoutBtn');
                 if (logoutBtn) {
                     logoutBtn.addEventListener('click', function() {
@@ -283,7 +298,6 @@
             }
         });
 
-        // 💾 ระบบบันทึกการแก้ไขข้อมูลสมาชิก (เพิ่มตัวเช็กป้องกันโค้ดค้าง)
         const mainProfileForm = document.getElementById('mainProfileForm');
         if (mainProfileForm) {
             mainProfileForm.addEventListener('submit', function(e) {
@@ -323,6 +337,7 @@
         }
     </script>
 
+    <!-- 🤖 ส่วนของ Chatbase Integration (ดึงตามโค้ดเดิมของคุณ) -->
     <script>
         window.embeddedChatbotConfig = {
             chatbotId: "6I1M_HwE69rI27n9gHq3y",
