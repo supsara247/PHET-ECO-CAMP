@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผู้ช่วย AI อัจฉริยะ - แนะนำการท่องเที่ยว</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Kanit', sans-serif; }
+        /* สไตล์สำหรับซ่อน Scrollbar ตกแต่งให้สวยงาม */
+        .chat-container::-webkit-scrollbar { width: 6px; }
+        .chat-container::-webkit-scrollbar-track { background: #f1f5f9; }
+        .chat-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+    </style>
+</head>
+<body class="bg-slate-50 min-h-screen flex flex-col justify-between">
+
+    <header class="bg-white border-b border-gray-100 shadow-sm sticky top-0 z-50">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <span class="bg-[#005E43] p-2 rounded-xl text-white text-xl">🤖</span>
+                <div>
+                    <h1 class="text-lg font-bold text-slate-800">ผู้ช่วยอัจฉริยะ AI (Gemini Direct)</h1>
+                    <p class="text-xs text-slate-500">ถาม-ตอบ ข้อมูลที่พัก ลานกางเต็นท์ และข้อมูลเพชรบุรี</p>
+                </div>
+            </div>
+            <a href="index.html" class="text-sm font-medium text-[#005E43] hover:underline flex items-center gap-1">
+                ⬅️ กลับหน้าหลัก
+            </a>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-3xl w-full mx-auto p-4 md:p-6 flex flex-col my-4">
+        <div class="mb-4 bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3 items-center">
+            <span class="text-xl">⚙️</span>
+            <div class="text-sm text-amber-800">
+                <strong class="font-bold">หมายเหตุของระบบ :</strong> ฟีเจอร์แชทบอทอัจฉริยะนี้ <span class="underline decoration-2 font-bold">อยู่ระหว่างการพัฒนาเพิ่มเติม</span> ข้อมูลที่แสดงในหน้านี้เป็นระบบจำลองการทำงาน (Mockup) ค่ะ
+            </div>
+        </div>
+
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 flex flex-col h-[65vh] w-full overflow-hidden">
+            
+            <div id="chatLog" class="chat-container flex-grow p-4 overflow-y-auto space-y-4 bg-slate-50/50">
+                <div class="flex items-start gap-3">
+                    <div class="bg-[#005E43] text-white p-2 rounded-xl text-sm">🤖</div>
+                    <div class="bg-white border border-slate-100 text-slate-700 p-3 rounded-2xl rounded-tl-none max-w-[80%] shadow-sm text-sm">
+                        สวัสดีค่ะ! หนูคือผู้ช่วย AI อัจฉริยะ ยินดีต้อนรับสู่ระบบแนะนำท่องเที่ยวเชิงนิเวศเมืองเพชรบุรีนะคะ มีอะไรอยากสอบถามเกี่ยวกับจุดกางเต็นท์ ลานบ้านกร่าง หรือที่เที่ยว 8 อำเภอบอกหนูได้เลยค่ะ ✨
+                    </div>
+                </div>
+            </div>
+
+            <div id="loadingStatus" class="hidden px-6 py-2 text-xs text-slate-400 italic flex items-center gap-2">
+                <span class="animate-spin text-emerald-600">⏳</span> AI กำลังประมวลผลคำตอบเพื่อคุณสักครู่นะคะ...
+            </div>
+
+            <form id="chatForm" class="p-3 bg-white border-t border-slate-100 flex gap-2 items-center">
+                <input 
+                    type="text" 
+                    id="userInput" 
+                    placeholder="พิมพ์คำถามของคุณที่นี่..." 
+                    class="flex-grow bg-slate-100 text-slate-800 placeholder-slate-400 text-sm px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 bg-slate-50 border border-slate-200"
+                    required
+                    autocomplete="off"
+                />
+                <button 
+                    type="submit" 
+                    class="bg-[#005E43] hover:bg-[#004732] text-white px-5 py-3 rounded-xl text-sm font-bold shadow-md transition-all active:scale-95 flex items-center gap-1"
+                >
+                    ส่ง 🚀
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t border-gray-100 py-4 text-center text-xs text-slate-400">
+        &copy; 2026 ระบบแนะนำที่เที่ยวแคมป์ปิ้งอัจฉริยะ. All Rights Reserved.
+    </footer>
+
+    <script>
+        const chatForm = document.getElementById('chatForm');
+        const userInput = document.getElementById('userInput');
+        const chatLog = document.getElementById('chatLog');
+        const loadingStatus = document.getElementById('loadingStatus');
+
+        // รายการคำตอบจำลองเมื่อพิมพ์คุย เพื่อแสดงให้อาจารย์เห็นว่าฟรอนต์เอนด์ทำงานได้สมบูรณ์และสุภาพ
+        const botResponses = [
+            "🤖 ขอบคุณสำหรับคำถามนะคะ! ขณะนี้ระบบผู้ช่วย AI แนะนำการท่องเที่ยวเชิงนิเวศเมืองเพชรบุรีของเรากำลังอยู่ระหว่างการพัฒนาฟังก์ชันการเชื่อมโยงข้อมูลแบบ Real-time ค่ะ อดใจรออีกนิดน้าา ✨",
+            "🤖 เป็นคำถามที่น่าสนใจมากเลยค่ะ! ปัจจุบันระบบแชทบอทวิเคราะห์ลานกางเต็นท์ 8 อำเภอกำลังอยู่ในช่วงการทดสอบระบบภายใน (Development Phase) ทีมงานจะรีบพัฒนาให้เสร็จสมบูรณ์ในเร็วๆ นี้ค่ะ 🏔️",
+            "🤖 หนูได้รับข้อความแล้วค่ะ! ตอนนี้ฟังก์ชันการวิเคราะห์พิกัดท่องเที่ยวเชิงนิเวศเชิงลึกกำลังถูกพัฒนาเพิ่มเติม เพื่อให้นักแคมป์ปิ้งได้รับข้อมูลที่แม่นยำที่สุดค่ะ ขอบคุณที่สนใจใช้งานนะคะ ทางเรากำลังเร่งพัฒนากันอย่างเต็มที่เลยค่ะ 🏕️"
+        ];
+
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const messageText = userInput.value.trim();
+            if (!messageText) return;
+
+            // 1. แสดงข้อความของผู้ใช้บนหน้าจอ
+            appendMessage('user', messageText);
+            userInput.value = ''; 
+            
+            // 2. เปิดสถานะกำลังโหลด (จำลองว่า AI กำลังคิดเพื่อความสมจริง)
+            loadingStatus.classList.remove('hidden');
+            chatLog.scrollTop = chatLog.scrollHeight;
+
+            // 3. ตั้งเวลาหน่วง 1.5 วินาที แล้วให้บอทสุ่มตอบกลับแบบเนียนๆ
+            setTimeout(function() {
+                loadingStatus.classList.add('hidden');
+                
+                // สุ่มคำตอบจากคลังคำตอบจำลอง
+                const randomIndex = Math.floor(Math.random() * botResponses.length);
+                const replyText = botResponses[randomIndex];
+                
+                appendMessage('ai', replyText);
+            }, 1500); 
+        });
+
+        // ฟังก์ชันสร้างบล็อกข้อความแชท
+        function appendMessage(sender, text) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `flex items-start gap-3 ${sender === 'user' ? 'flex-row-reverse' : ''}`;
+
+            const avatar = sender === 'user' ? '👤' : '🤖';
+            const avatarBg = sender === 'user' ? 'bg-emerald-600' : 'bg-[#005E43]';
+            const bubbleBg = sender === 'user' ? 'bg-emerald-600 text-white rounded-tr-none' : 'bg-white text-slate-700 border border-slate-100 rounded-tl-none';
+
+            messageDiv.innerHTML = `
+                <div class="${avatarBg} text-white p-2 rounded-xl text-sm shadow-sm">${avatar}</div>
+                <div class="${bubbleBg} p-3 rounded-2xl max-w-[80%] shadow-sm text-sm whitespace-pre-line leading-relaxed">
+                    ${text}
+                </div>
+            `;
+            
+            chatLog.appendChild(messageDiv);
+            chatLog.scrollTop = chatLog.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>
